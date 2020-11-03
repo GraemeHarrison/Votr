@@ -8,14 +8,19 @@
 import Foundation
 
 class OnboardingUseCase {
-    
+
+    private var startMode: OnboardingStartMode!
     weak var presenter: OnboardingUseCaseOutput?
 
     init() {}
 
+    func setParameters(startMode: OnboardingStartMode) {
+        self.startMode = startMode
+    }
+
     func begin() {
 
         let transformer = OnboardingBeginTransformer()
-        transformer.transform(presenter: presenter)
+        transformer.transform(startMode: startMode, presenter: presenter)
     }
 }

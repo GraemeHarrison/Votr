@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZn-GB-u5d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIm-pN-uAN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -17,20 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready To Gif'r!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-on-JRb">
-                                <rect key="frame" x="135" y="104" width="144" height="21"/>
+                                <rect key="frame" x="135" y="148" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-pG-LZl">
-                                <rect key="frame" x="180" y="320" width="54" height="30"/>
+                                <rect key="frame" x="180" y="364" width="54" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="36c-7e-s2t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-Fj-uQF">
-                                <rect key="frame" x="188" y="482" width="38" height="30"/>
+                                <rect key="frame" x="188" y="526" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="5eW-Gu-Sne"/>
@@ -48,6 +48,7 @@
                             <constraint firstItem="NGB-on-JRb" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="zd0-fU-aTo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dyx-sx-6j2"/>
                     <connections>
                         <outlet property="loginButton" destination="E3P-Fj-uQF" id="qGu-s2-kfx"/>
                         <outlet property="signUpButton" destination="iRC-pG-LZl" id="NCB-Cw-ClS"/>
@@ -55,7 +56,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx5-4A-lZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="-31"/>
+            <point key="canvasLocation" x="491" y="-31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oYl-Cg-ipV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dIm-pN-uAN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gaK-Ya-X8k">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TZn-GB-u5d" kind="relationship" relationship="rootViewController" id="zgT-mA-XrV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsI-UY-J5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="-31.473214285714285"/>
         </scene>
     </scenes>
     <resources>

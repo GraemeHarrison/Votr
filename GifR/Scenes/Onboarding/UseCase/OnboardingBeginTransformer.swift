@@ -11,7 +11,13 @@ class OnboardingBeginTransformer {
 
     init() {}
 
-    func transform(presenter: OnboardingUseCaseOutput?)  {
-        
+    func transform(startMode: OnboardingStartMode, presenter: OnboardingUseCaseOutput?)  {
+
+        switch startMode {
+
+        case .signUp: break
+
+        case .login: break
+        }
     }
 }

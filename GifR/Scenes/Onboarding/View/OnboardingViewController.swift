@@ -7,8 +7,13 @@
 
 import UIKit
 
-@objc protocol OnboardingViewControllerDelegate {
+enum OnboardingStartMode {
+
+    case signUp
+    case login
 }
+
+protocol OnboardingViewControllerDelegate: class {}
 
 protocol OnboardingPresenterOutput: class {
     func showModels()
@@ -25,10 +30,12 @@ class OnboardingViewController: UIViewController {
 
     fileprivate var adapter = OnboardingAdapter()
     var presenter: OnboardingPresenter!
-    private(set) var delegate: OnboardingViewControllerDelegate?
+    private(set) weak var delegate: OnboardingViewControllerDelegate?
 
-    func setParameters(delegate: OnboardingViewControllerDelegate) {
+    func setParameters(startMode: OnboardingStartMode, delegate: OnboardingViewControllerDelegate?) {
+
         self.delegate = delegate
+        presenter.setParameters(startMode: startMode)
     }
 
     override func awakeFromNib() {

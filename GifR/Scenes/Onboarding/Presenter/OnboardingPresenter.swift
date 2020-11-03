@@ -26,6 +26,10 @@ class OnboardingPresenter {
         self.useCase = useCase
         self.router = router
     }
+
+    func setParameters(startMode: OnboardingStartMode) {
+        useCase.setParameters(startMode: startMode)
+    }
     
     func eventViewReady() {
         useCase.begin()
