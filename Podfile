@@ -10,6 +10,7 @@ target 'GifR' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'GifRTests' do
     inherit! :search_paths
