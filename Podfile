@@ -9,6 +9,7 @@ target 'GifR' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Alamofire'
 
   target 'GifRTests' do
     inherit! :search_paths
