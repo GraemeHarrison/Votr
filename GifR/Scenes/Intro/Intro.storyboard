@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZn-GB-u5d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="qfX-Gc-S37">
+            <objects>
+                <viewController id="TZn-GB-u5d" customClass="IntroViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="th6-ax-Nam">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready To Gif'r!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-on-JRb">
+                                <rect key="frame" x="135" y="104" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-pG-LZl">
+                                <rect key="frame" x="180" y="320" width="54" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="36c-7e-s2t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-Fj-uQF">
+                                <rect key="frame" x="188" y="482" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="5eW-Gu-Sne"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6pL-Wm-nCX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iRC-pG-LZl" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="3yo-Nq-icd"/>
+                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="7N4-HB-RE0"/>
+                            <constraint firstItem="NGB-on-JRb" firstAttribute="top" secondItem="6pL-Wm-nCX" secondAttribute="top" constant="60" id="aBz-b1-h1u"/>
+                            <constraint firstItem="iRC-pG-LZl" firstAttribute="top" secondItem="NGB-on-JRb" secondAttribute="bottom" constant="195" id="cNp-So-H8J"/>
+                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="top" secondItem="iRC-pG-LZl" secondAttribute="bottom" constant="132" id="faW-Vo-diY"/>
+                            <constraint firstItem="NGB-on-JRb" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="zd0-fU-aTo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="E3P-Fj-uQF" id="qGu-s2-kfx"/>
+                        <outlet property="signUpButton" destination="iRC-pG-LZl" id="NCB-Cw-ClS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gx5-4A-lZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="-31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
