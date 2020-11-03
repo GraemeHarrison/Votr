@@ -23,10 +23,10 @@ class OnboardingAuthTransformer {
         var failMessage = ""
 
         if let email = cache.email, !email.isEmpty, email.isValidEmail() {} else {
-            failMessage += "* Email\n"
+            failMessage += "\n* Email"
         }
         if let password = cache.password, password.isValidPassword() {} else {
-            failMessage += "* Password (min 6 characters)"
+            failMessage += "\n* Password (min 6 characters)"
         }
 
         switch startMode {
@@ -34,11 +34,11 @@ class OnboardingAuthTransformer {
         case .signUp:
 
             if let username = cache.username, !username.isEmpty, username.isValidUsername() {} else {
-                failMessage = "* User name\n" + failMessage
+                failMessage = "\n* User name" + failMessage
             }
 
             guard failMessage.isEmpty else {
-                print("Remaining Requirements" + failMessage)
+                presenter?.presentOkErrorAlert(title: .oops, message: "\nRemaining Requirements:\n" + failMessage)
                 return
             }
             handleSignUp()
@@ -46,7 +46,7 @@ class OnboardingAuthTransformer {
         case .login:
 
             guard failMessage.isEmpty else {
-                print("Remaining Requirements" + failMessage)
+                presenter?.presentOkErrorAlert(title: .oops, message: "\nRemaining Requirements:\n" + failMessage)
                 return
             }
             handleLogin()
@@ -55,12 +55,14 @@ class OnboardingAuthTransformer {
 
     private func handleSignUp() {
 
-        FirebaseService.shared.signUp(email: cache.email!, password: cache.password!) { (success, error) in
+        FirebaseService.shared.signUp(email: cache.email!, password: cache.password!, username: cache.username!) { (success, error) in
 
             guard success else {
-                print(error)
+                print(String(describing: error))
+                self.presenter?.presentGenericErrorAlert()
                 return
             }
+            MainViewController.instance.showStoryboard(.home)
         }
     }
 
@@ -69,9 +71,11 @@ class OnboardingAuthTransformer {
         FirebaseService.shared.login(email: cache.email!, password: cache.password!) { (success, error) in
 
             guard success else {
-                print(error)
+                print(String(describing: error))
+                self.presenter?.presentGenericErrorAlert()
                 return
             }
+            MainViewController.instance.showStoryboard(.home)
         }
     }
 }

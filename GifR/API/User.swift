@@ -6,25 +6,38 @@
 //
 
 import Foundation
-import Firebase
 
 class User {
 
     enum Key: String {
         case uid
+        case username
     }
 
     var uid: String!
+    var username: String!
 
-    init(firUser: FirebaseAuth.User) {
-        self.uid = firUser.uid
+    init(uid: String, username: String) {
+
+        self.uid = uid
+        self.username = username
+    }
+
+    init(dictionary: [AnyHashable: Any]) {
+
+        uid = dictionary[Key.uid] as? String
+        username = dictionary[Key.username] as? String
     }
 }
 
 extension User {
 
     func toDictionary() -> [AnyHashable: Any] {
-        return fields(attributes: [.uid: uid!])
+
+        return fields(attributes: [
+            .uid: uid!,
+            .username: username!
+        ])
     }
 
     private func fields(attributes: [Key: Any]) -> [AnyHashable: Any] {

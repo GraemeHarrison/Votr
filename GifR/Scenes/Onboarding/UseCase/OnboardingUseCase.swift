@@ -45,6 +45,8 @@ class OnboardingUseCase {
     }
 
     func ctaTapped() {
-        
+
+        let transformer = OnboardingAuthTransformer()
+        transformer.transform(startMode: startMode, cache: cache, presenter: presenter)
     }
 }

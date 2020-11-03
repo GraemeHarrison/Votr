@@ -15,7 +15,7 @@ enum OnboardingStartMode {
 
 protocol OnboardingViewControllerDelegate: class {}
 
-protocol OnboardingPresenterOutput: class {
+protocol OnboardingPresenterOutput: ShowAlert {
     func showModels()
 }
 

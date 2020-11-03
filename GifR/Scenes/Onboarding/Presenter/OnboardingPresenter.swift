@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol OnboardingUseCaseOutput: class {
+protocol OnboardingUseCaseOutput: PresentAlert {
 
     func presentModelListBegin()
     func presentModelListEnd()
@@ -57,6 +57,10 @@ class OnboardingPresenter {
 }
 
 extension OnboardingPresenter: OnboardingUseCaseOutput {
+
+    var vc: (UIViewController & ShowAlert)? {
+        return viewController as? UIViewController & ShowAlert
+    }
 
     func presentModelListBegin() {
         viewModels = []

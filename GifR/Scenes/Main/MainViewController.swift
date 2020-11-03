@@ -10,7 +10,16 @@ import UIKit
 class MainViewController: UIViewController {
 
     enum Storyboard: String {
-        case intro = "Intro"
+
+        case intro
+        case home
+    }
+
+    static var instance: MainViewController {
+
+        let appDelegate = UIApplication.shared.delegate!
+        let window = appDelegate.window!
+        return window!.rootViewController as! MainViewController
     }
 
     private(set) var currentViewController: UIViewController?
@@ -23,7 +32,7 @@ class MainViewController: UIViewController {
 
     private func showInitialController(storyboard: Storyboard) {
 
-        let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
+        let storyboard = UIStoryboard(name: storyboard.rawValue.capitalized, bundle: nil)
         currentViewController = storyboard.instantiateInitialViewController()!
         showViewController(currentViewController!)
     }

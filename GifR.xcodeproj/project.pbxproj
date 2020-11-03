@@ -43,6 +43,9 @@
 		2E350F942551058400083B2E /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8C2551058400083B2E /* HomeUseCase.swift */; };
 		2E350F952551058400083B2E /* HomeBeginTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */; };
 		2E350F962551058400083B2E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8F2551058400083B2E /* HomeRouter.swift */; };
+		2E350F9E2551071B00083B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E350F9D2551071B00083B2E /* GoogleService-Info.plist */; };
+		2E350FA4255107D800083B2E /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350FA3255107D800083B2E /* ShowAlert.swift */; };
+		2E350FAC255108FE00083B2E /* PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350FAB255108FE00083B2E /* PresentAlert.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -109,6 +112,9 @@
 		2E350F8C2551058400083B2E /* HomeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBeginTransformer.swift; sourceTree = "<group>"; };
 		2E350F8F2551058400083B2E /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2E350F9D2551071B00083B2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2E350FA3255107D800083B2E /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		2E350FAB255108FE00083B2E /* PresentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAlert.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				2E350E002550CBE000083B2E /* Assets.xcassets */,
 				2E350E022550CBE000083B2E /* LaunchScreen.storyboard */,
 				2E350E052550CBE000083B2E /* Info.plist */,
+				2E350F9D2551071B00083B2E /* GoogleService-Info.plist */,
 			);
 			path = GifR;
 			sourceTree = "<group>";
@@ -332,6 +339,7 @@
 		2E350ED22550DDEE00083B2E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E350FA2255107CC00083B2E /* Protocols */,
 				2E350ED32550DDF900083B2E /* Extensions */,
 			);
 			path = Common;
@@ -434,6 +442,15 @@
 				2E350F8F2551058400083B2E /* HomeRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		2E350FA2255107CC00083B2E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2E350FA3255107D800083B2E /* ShowAlert.swift */,
+				2E350FAB255108FE00083B2E /* PresentAlert.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +563,7 @@
 			files = (
 				2E350E042550CBE000083B2E /* LaunchScreen.storyboard in Resources */,
 				2E350E012550CBE000083B2E /* Assets.xcassets in Resources */,
+				2E350F9E2551071B00083B2E /* GoogleService-Info.plist in Resources */,
 				2E350F262550F14700083B2E /* OnboardingCTACell.xib in Resources */,
 				2E350DFF2550CBDD00083B2E /* Main.storyboard in Resources */,
 				2E350EBD2550DD8400083B2E /* Onboarding.storyboard in Resources */,
@@ -689,9 +707,11 @@
 				2E350F932551058400083B2E /* HomeViewController.swift in Sources */,
 				2E350ED52550DE0B00083B2E /* Cells.swift in Sources */,
 				2E350EBE2550DD8400083B2E /* OnboardingPresenter.swift in Sources */,
+				2E350FAC255108FE00083B2E /* PresentAlert.swift in Sources */,
 				2E350EC42550DD8400083B2E /* OnboardingAdapter.swift in Sources */,
 				2E350EC02550DD8400083B2E /* OnboardingCellProtocol.swift in Sources */,
 				2E350F922551058400083B2E /* HomeConnector.swift in Sources */,
+				2E350FA4255107D800083B2E /* ShowAlert.swift in Sources */,
 				2E350EC32550DD8400083B2E /* OnboardingCellConfigurator.swift in Sources */,
 				2E350EC12550DD8400083B2E /* OnboardingTextFieldCell.swift in Sources */,
 				2E350DFC2550CBDD00083B2E /* MainViewController.swift in Sources */,
@@ -888,7 +908,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.GifR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.gifr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -908,7 +928,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.GifR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.gifr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
