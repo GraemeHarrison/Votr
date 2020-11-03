@@ -36,6 +36,13 @@
 		2E350F582550F71000083B2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F572550F71000083B2E /* User.swift */; };
 		2E350F752550FAD300083B2E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F742550FAD300083B2E /* FirebaseService.swift */; };
 		2E350F7A2551038100083B2E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F792551038100083B2E /* String.swift */; };
+		2E350F902551058400083B2E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F852551058400083B2E /* HomePresenter.swift */; };
+		2E350F912551058400083B2E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E350F862551058400083B2E /* Home.storyboard */; };
+		2E350F922551058400083B2E /* HomeConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F882551058400083B2E /* HomeConnector.swift */; };
+		2E350F932551058400083B2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8A2551058400083B2E /* HomeViewController.swift */; };
+		2E350F942551058400083B2E /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8C2551058400083B2E /* HomeUseCase.swift */; };
+		2E350F952551058400083B2E /* HomeBeginTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */; };
+		2E350F962551058400083B2E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F8F2551058400083B2E /* HomeRouter.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -95,6 +102,13 @@
 		2E350F572550F71000083B2E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E350F742550FAD300083B2E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		2E350F792551038100083B2E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2E350F852551058400083B2E /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2E350F862551058400083B2E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2E350F882551058400083B2E /* HomeConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeConnector.swift; sourceTree = "<group>"; };
+		2E350F8A2551058400083B2E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2E350F8C2551058400083B2E /* HomeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBeginTransformer.swift; sourceTree = "<group>"; };
+		2E350F8F2551058400083B2E /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +230,7 @@
 				2E350E9D2550DCBE00083B2E /* Main */,
 				2E350EDC2550DF6100083B2E /* Intro */,
 				2E350EA92550DD8400083B2E /* Onboarding */,
+				2E350F832551058400083B2E /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -367,6 +382,60 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		2E350F832551058400083B2E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F862551058400083B2E /* Home.storyboard */,
+				2E350F892551058400083B2E /* View */,
+				2E350F842551058400083B2E /* Presenter */,
+				2E350F8B2551058400083B2E /* UseCase */,
+				2E350F8E2551058400083B2E /* Router */,
+				2E350F872551058400083B2E /* Connector */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2E350F842551058400083B2E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F852551058400083B2E /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2E350F872551058400083B2E /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F882551058400083B2E /* HomeConnector.swift */,
+			);
+			path = Connector;
+			sourceTree = "<group>";
+		};
+		2E350F892551058400083B2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F8A2551058400083B2E /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E350F8B2551058400083B2E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F8C2551058400083B2E /* HomeUseCase.swift */,
+				2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2E350F8E2551058400083B2E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F8F2551058400083B2E /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,6 +551,7 @@
 				2E350EBD2550DD8400083B2E /* Onboarding.storyboard in Resources */,
 				2E350F052550E4F100083B2E /* OnboardingTextFieldCell.xib in Resources */,
 				2E350EE62550DFAE00083B2E /* Intro.storyboard in Resources */,
+				2E350F912551058400083B2E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,26 +679,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E350F902551058400083B2E /* HomePresenter.swift in Sources */,
 				2E350F752550FAD300083B2E /* FirebaseService.swift in Sources */,
 				2E350EDE2550DF7600083B2E /* IntroViewController.swift in Sources */,
 				2E350F7A2551038100083B2E /* String.swift in Sources */,
 				2E350EC62550DD8400083B2E /* OnboardingUseCase.swift in Sources */,
 				2E350F412550F36200083B2E /* OnboardingAuthTransformer.swift in Sources */,
+				2E350F942551058400083B2E /* HomeUseCase.swift in Sources */,
+				2E350F932551058400083B2E /* HomeViewController.swift in Sources */,
 				2E350ED52550DE0B00083B2E /* Cells.swift in Sources */,
 				2E350EBE2550DD8400083B2E /* OnboardingPresenter.swift in Sources */,
 				2E350EC42550DD8400083B2E /* OnboardingAdapter.swift in Sources */,
 				2E350EC02550DD8400083B2E /* OnboardingCellProtocol.swift in Sources */,
+				2E350F922551058400083B2E /* HomeConnector.swift in Sources */,
 				2E350EC32550DD8400083B2E /* OnboardingCellConfigurator.swift in Sources */,
 				2E350EC12550DD8400083B2E /* OnboardingTextFieldCell.swift in Sources */,
 				2E350DFC2550CBDD00083B2E /* MainViewController.swift in Sources */,
 				2E350EBF2550DD8400083B2E /* OnboardingConnector.swift in Sources */,
 				2E350EC72550DD8400083B2E /* OnboardingBeginTransformer.swift in Sources */,
 				2E350EC52550DD8400083B2E /* OnboardingViewController.swift in Sources */,
+				2E350F962551058400083B2E /* HomeRouter.swift in Sources */,
 				2E350EC82550DD8400083B2E /* OnboardingRouter.swift in Sources */,
 				2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */,
 				2E350EC22550DD8400083B2E /* OnboardingViewModel.swift in Sources */,
 				2E350DF82550CBDD00083B2E /* AppDelegate.swift in Sources */,
 				2E350F582550F71000083B2E /* User.swift in Sources */,
+				2E350F952551058400083B2E /* HomeBeginTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
