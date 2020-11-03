@@ -12,6 +12,9 @@ protocol OnboardingUseCaseOutput: class {
 
     func presentModelListBegin()
     func presentModelListEnd()
+    func presentUsernameInput(_ name: String?)
+    func presentEmailInput(_ email: String?)
+    func presentPasswordInput(_ password: String?)
 }
 
 class OnboardingPresenter {
@@ -34,6 +37,18 @@ class OnboardingPresenter {
     func eventViewReady() {
         useCase.begin()
     }
+
+    func usernameChanged(_ username: String?) {
+        useCase.usernameChanged(username)
+    }
+
+    func emailChanged(_ email: String?) {
+        useCase.emailChanged(email)
+    }
+
+    func passwordChanged(_ password: String?) {
+        useCase.passwordChanged(password)
+    }
 }
 
 extension OnboardingPresenter: OnboardingUseCaseOutput {
@@ -44,6 +59,18 @@ extension OnboardingPresenter: OnboardingUseCaseOutput {
 
     func presentModelListEnd() {
         viewController?.showModels()
+    }
+
+    func presentUsernameInput(_ name: String?) {
+        viewModels.append(.usernameInput(text: name, placeholder: "First Name"))
+    }
+
+    func presentEmailInput(_ email: String?) {
+        viewModels.append(.emailInput(text: email, placeholder: "Email"))
+    }
+
+    func presentPasswordInput(_ password: String?) {
+        viewModels.append(.passwordInput(text: password, placeholder: "Password"))
     }
 }
 

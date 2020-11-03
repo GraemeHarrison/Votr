@@ -32,6 +32,9 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bu8-NP-Yq0" id="0xp-Ft-weN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hq-VK-Slb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

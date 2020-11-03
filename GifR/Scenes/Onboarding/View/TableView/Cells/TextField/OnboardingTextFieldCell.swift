@@ -14,18 +14,46 @@ class OnboardingTextFieldCell: UITableViewCell, OnboardingCellProtocol {
     fileprivate weak var presenter: OnboardingPresenter!
     fileprivate weak var tableView: UITableView!
     fileprivate var indexPath: IndexPath!
+    private var viewModel: OnboardingViewModel!
 
     func show(viewModel: OnboardingViewModel, tableView: UITableView, at indexPath: IndexPath, presenter: OnboardingPresenter) -> OnboardingCellProtocol {
 
-        guard case .usernameInput(let text, let placeholder) = viewModel else { fatalError() }
+        switch viewModel {
 
+        case .usernameInput(let text, let placeholder):
+            configure(text: text, placeholder: placeholder, keyboardType: .default, isSecure: false)
+
+        case .emailInput(let text, let placeholder):
+            configure(text: text, placeholder: placeholder, keyboardType: .emailAddress, isSecure: false)
+
+        case .passwordInput(let text, let placeholder):
+            configure(text: text, placeholder: placeholder, keyboardType: .default, isSecure: true)
+
+        default: fatalError()
+        }
+
+        self.viewModel = viewModel
         self.presenter = presenter
         self.tableView = tableView
         self.indexPath = indexPath
-
-        textField.placeholder = placeholder
-        textField.text = text
-
         return self
+    }
+    private func configure(text: String?, placeholder: String, keyboardType: UIKeyboardType, isSecure: Bool) {
+
+        textField.text = text
+        textField.placeholder = placeholder
+        textField.keyboardType = keyboardType
+        textField.isSecureTextEntry = isSecure
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+
+    @objc func textFieldDidChange(_ textField: UITextField) {
+
+        switch viewModel {
+        case .usernameInput: presenter.usernameChanged(textField.text)
+        case .emailInput: presenter.emailChanged(textField.text)
+        case .passwordInput: presenter.passwordChanged(textField.text)
+        default: break
+        }
     }
 }

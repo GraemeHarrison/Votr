@@ -47,7 +47,12 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        configureTableView()
         presenter.eventViewReady()
+    }
+
+    private func configureTableView() {
+        tableView.registerCells([OnboardingTextFieldCell.self])
     }
 }
 

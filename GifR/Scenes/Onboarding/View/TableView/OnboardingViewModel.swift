@@ -10,12 +10,16 @@ import UIKit
 enum OnboardingViewModel {
 
     case usernameInput(text: String?, placeholder: String)
+    case emailInput(text: String?, placeholder: String)
+    case passwordInput(text: String?, placeholder: String)
 
     var cellId: String {
 
         switch self {
 
-        case .usernameInput:
+        case .usernameInput,
+             .emailInput,
+             .passwordInput:
             return OnboardingTextFieldCell.reuseId
         }
     }
