@@ -7,6 +7,7 @@ target 'GifR' do
 
   # Pods for GifR
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   target 'GifRTests' do
     inherit! :search_paths
