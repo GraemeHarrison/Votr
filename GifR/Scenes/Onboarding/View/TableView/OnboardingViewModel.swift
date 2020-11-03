@@ -9,14 +9,14 @@ import UIKit
 
 enum OnboardingViewModel {
 
-    case template
+    case usernameInput(text: String?, placeholder: String)
 
     var cellId: String {
 
         switch self {
 
-        case .template:
-            return OnboardingCell.reuseId
+        case .usernameInput:
+            return OnboardingTextFieldCell.reuseId
         }
     }
 }
