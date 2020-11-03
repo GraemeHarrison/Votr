@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OnboardingCTACell" rowHeight="76" id="nUA-LY-hTK" customClass="OnboardingCTACell" customModule="GifR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nUA-LY-hTK" id="fK7-na-76a">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-Rh-t7W">
+                        <rect key="frame" x="16" y="0.0" width="382" height="76"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="buttonTapped:" destination="nUA-LY-hTK" eventType="touchUpInside" id="0ax-f6-zqb"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="VXV-Rh-t7W" secondAttribute="bottom" id="Q3g-jZ-90L"/>
+                    <constraint firstAttribute="trailing" secondItem="VXV-Rh-t7W" secondAttribute="trailing" constant="16" id="ey3-0F-08x"/>
+                    <constraint firstItem="VXV-Rh-t7W" firstAttribute="leading" secondItem="fK7-na-76a" secondAttribute="leading" constant="16" id="oui-1A-GlD"/>
+                    <constraint firstItem="VXV-Rh-t7W" firstAttribute="top" secondItem="fK7-na-76a" secondAttribute="top" id="wIy-ja-voX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="VXV-Rh-t7W" id="K2g-sb-bkN"/>
+            </connections>
+            <point key="canvasLocation" x="311.59420289855075" y="57.589285714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -52,7 +52,8 @@ class OnboardingViewController: UIViewController {
     }
 
     private func configureTableView() {
-        tableView.registerCells([OnboardingTextFieldCell.self])
+        tableView.registerCells([OnboardingTextFieldCell.self,
+                                 OnboardingCTACell.self])
     }
 }
 

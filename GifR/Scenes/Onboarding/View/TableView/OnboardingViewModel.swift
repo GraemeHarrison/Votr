@@ -12,6 +12,7 @@ enum OnboardingViewModel {
     case usernameInput(text: String?, placeholder: String)
     case emailInput(text: String?, placeholder: String)
     case passwordInput(text: String?, placeholder: String)
+    case cta(title: String)
 
     var cellId: String {
 
@@ -21,6 +22,8 @@ enum OnboardingViewModel {
              .emailInput,
              .passwordInput:
             return OnboardingTextFieldCell.reuseId
+
+        case .cta: return OnboardingCTACell.reuseId
         }
     }
 }

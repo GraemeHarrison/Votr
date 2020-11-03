@@ -15,6 +15,7 @@ protocol OnboardingUseCaseOutput: class {
     func presentUsernameInput(_ name: String?)
     func presentEmailInput(_ email: String?)
     func presentPasswordInput(_ password: String?)
+    func presentCTA(title: String) 
 }
 
 class OnboardingPresenter {
@@ -38,16 +39,20 @@ class OnboardingPresenter {
         useCase.begin()
     }
 
-    func usernameChanged(_ username: String?) {
+    func eventUsernameChanged(_ username: String?) {
         useCase.usernameChanged(username)
     }
 
-    func emailChanged(_ email: String?) {
+    func eventEmailChanged(_ email: String?) {
         useCase.emailChanged(email)
     }
 
-    func passwordChanged(_ password: String?) {
+    func eventPasswordChanged(_ password: String?) {
         useCase.passwordChanged(password)
+    }
+
+    func eventCTATapped() {
+        useCase.ctaTapped()
     }
 }
 
@@ -71,6 +76,10 @@ extension OnboardingPresenter: OnboardingUseCaseOutput {
 
     func presentPasswordInput(_ password: String?) {
         viewModels.append(.passwordInput(text: password, placeholder: "Password"))
+    }
+
+    func presentCTA(title: String) {
+        viewModels.append(.cta(title: title))
     }
 }
 

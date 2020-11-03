@@ -30,11 +30,13 @@ class OnboardingBeginTransformer {
         presenter?.presentUsernameInput(nil)
         presenter?.presentEmailInput(nil)
         presenter?.presentPasswordInput(nil)
+        presenter?.presentCTA(title: "Create Account")
     }
 
     private func presentLoginUI() {
 
         presenter?.presentEmailInput(nil)
         presenter?.presentPasswordInput(nil)
+        presenter?.presentCTA(title: "Login")
     }
 }

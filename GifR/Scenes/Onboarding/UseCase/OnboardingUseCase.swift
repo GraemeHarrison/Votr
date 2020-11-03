@@ -43,4 +43,8 @@ class OnboardingUseCase {
     func passwordChanged(_ password: String?) {
         cache.password = password
     }
+
+    func ctaTapped() {
+        
+    }
 }

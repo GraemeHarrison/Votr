@@ -30,6 +30,8 @@
 		2E350EDE2550DF7600083B2E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350EDD2550DF7600083B2E /* IntroViewController.swift */; };
 		2E350EE62550DFAE00083B2E /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E350EE52550DFAE00083B2E /* Intro.storyboard */; };
 		2E350F052550E4F100083B2E /* OnboardingTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E350F042550E4F100083B2E /* OnboardingTextFieldCell.xib */; };
+		2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350F1F2550F10500083B2E /* OnboardingCTACell.swift */; };
+		2E350F262550F14700083B2E /* OnboardingCTACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E350F252550F14700083B2E /* OnboardingCTACell.xib */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -83,6 +85,8 @@
 		2E350EDD2550DF7600083B2E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		2E350EE52550DFAE00083B2E /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		2E350F042550E4F100083B2E /* OnboardingTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTextFieldCell.xib; sourceTree = "<group>"; };
+		2E350F1F2550F10500083B2E /* OnboardingCTACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCTACell.swift; sourceTree = "<group>"; };
+		2E350F252550F14700083B2E /* OnboardingCTACell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCTACell.xib; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 		2E350EB12550DD8400083B2E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2E350F242550F10900083B2E /* CTA */,
 				2E350F032550E4DD00083B2E /* TextField */,
 			);
 			path = Cells;
@@ -331,6 +336,15 @@
 				2E350EB32550DD8400083B2E /* OnboardingTextFieldCell.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		2E350F242550F10900083B2E /* CTA */ = {
+			isa = PBXGroup;
+			children = (
+				2E350F252550F14700083B2E /* OnboardingCTACell.xib */,
+				2E350F1F2550F10500083B2E /* OnboardingCTACell.swift */,
+			);
+			path = CTA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +457,7 @@
 			files = (
 				2E350E042550CBE000083B2E /* LaunchScreen.storyboard in Resources */,
 				2E350E012550CBE000083B2E /* Assets.xcassets in Resources */,
+				2E350F262550F14700083B2E /* OnboardingCTACell.xib in Resources */,
 				2E350DFF2550CBDD00083B2E /* Main.storyboard in Resources */,
 				2E350EBD2550DD8400083B2E /* Onboarding.storyboard in Resources */,
 				2E350F052550E4F100083B2E /* OnboardingTextFieldCell.xib in Resources */,
@@ -587,6 +602,7 @@
 				2E350EC72550DD8400083B2E /* OnboardingBeginTransformer.swift in Sources */,
 				2E350EC52550DD8400083B2E /* OnboardingViewController.swift in Sources */,
 				2E350EC82550DD8400083B2E /* OnboardingRouter.swift in Sources */,
+				2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */,
 				2E350EC22550DD8400083B2E /* OnboardingViewModel.swift in Sources */,
 				2E350DF82550CBDD00083B2E /* AppDelegate.swift in Sources */,
 			);

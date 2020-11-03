@@ -38,6 +38,7 @@ class OnboardingTextFieldCell: UITableViewCell, OnboardingCellProtocol {
         self.indexPath = indexPath
         return self
     }
+
     private func configure(text: String?, placeholder: String, keyboardType: UIKeyboardType, isSecure: Bool) {
 
         textField.text = text
@@ -50,9 +51,9 @@ class OnboardingTextFieldCell: UITableViewCell, OnboardingCellProtocol {
     @objc func textFieldDidChange(_ textField: UITextField) {
 
         switch viewModel {
-        case .usernameInput: presenter.usernameChanged(textField.text)
-        case .emailInput: presenter.emailChanged(textField.text)
-        case .passwordInput: presenter.passwordChanged(textField.text)
+        case .usernameInput: presenter.eventUsernameChanged(textField.text)
+        case .emailInput: presenter.eventEmailChanged(textField.text)
+        case .passwordInput: presenter.eventPasswordChanged(textField.text)
         default: break
         }
     }
