@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol HomeUseCaseOutput: class {
-}
+protocol HomeUseCaseOutput: class {}
 
 class HomePresenter {
     

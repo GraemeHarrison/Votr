@@ -15,8 +15,11 @@ protocol HomePresenterOutput: class {
 
 class HomeViewController: UIViewController {
     
-    var presenter: HomePresenter!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var likeButton: UIButton!
+    @IBOutlet var randomGifButton: UIButton!
 
+    var presenter: HomePresenter!
     private(set) var delegate: HomeViewControllerDelegate?
 
     func setParameters(delegate: HomeViewControllerDelegate) {
@@ -33,6 +36,14 @@ class HomeViewController: UIViewController {
 
         super.viewDidLoad()
         presenter.eventViewReady()
+    }
+    
+    @IBAction func likeTapped(_ sender: Any) {
+
+    }
+
+    @IBAction func randomGifTapped(_ sender: Any) {
+
     }
 }
 

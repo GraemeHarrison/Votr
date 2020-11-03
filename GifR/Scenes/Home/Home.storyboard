@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cH4-rw-JwR">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cH4-rw-JwR">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Lae-Oc-rZX">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="cH4-rw-JwR" customClass="HomeViewController" sceneMemberID="viewController">
@@ -19,9 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="6qy-z5-2zk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-ed-lDI">
+                                <rect key="frame" x="0.0" y="89" width="375" height="261"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63l-wi-2fr">
+                                <rect key="frame" x="172.5" y="393" width="30" height="30"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="likeTapped:" destination="cH4-rw-JwR" eventType="touchUpInside" id="p78-WR-fMK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLG-Cl-YZ7">
+                                <rect key="frame" x="159.5" y="555" width="56" height="30"/>
+                                <state key="normal" title="Next Gif"/>
+                                <connections>
+                                    <action selector="randomGifTapped:" destination="cH4-rw-JwR" eventType="touchUpInside" id="Gnz-Up-HzO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kLG-Cl-YZ7" firstAttribute="centerX" secondItem="6qy-z5-2zk" secondAttribute="centerX" id="24Z-EG-R1M"/>
+                            <constraint firstAttribute="trailing" secondItem="8fK-ed-lDI" secondAttribute="trailing" id="9eG-Ye-CP2"/>
+                            <constraint firstItem="63l-wi-2fr" firstAttribute="top" secondItem="8fK-ed-lDI" secondAttribute="bottom" constant="43" id="B2r-d8-gQL"/>
+                            <constraint firstItem="8fK-ed-lDI" firstAttribute="top" secondItem="xvg-3V-0aT" secondAttribute="bottom" constant="89" id="H0T-BF-qvC"/>
+                            <constraint firstItem="63l-wi-2fr" firstAttribute="centerX" secondItem="8fK-ed-lDI" secondAttribute="centerX" id="agG-i2-lv2"/>
+                            <constraint firstItem="8fK-ed-lDI" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leading" id="gVN-rG-DeF"/>
+                            <constraint firstItem="prc-Pb-eGC" firstAttribute="top" secondItem="kLG-Cl-YZ7" secondAttribute="bottom" constant="82" id="iQc-5j-d38"/>
+                            <constraint firstItem="prc-Pb-eGC" firstAttribute="top" secondItem="8fK-ed-lDI" secondAttribute="bottom" constant="317" id="xtt-g5-w0L"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="imageView" destination="8fK-ed-lDI" id="oh7-Fl-S4X"/>
+                        <outlet property="likeButton" destination="63l-wi-2fr" id="JXw-to-pYB"/>
+                        <outlet property="randomGifButton" destination="kLG-Cl-YZ7" id="cMg-99-Ygo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hq-VK-Slb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
