@@ -15,7 +15,7 @@ protocol OnboardingUseCaseOutput: class {
     func presentUsernameInput(_ name: String?)
     func presentEmailInput(_ email: String?)
     func presentPasswordInput(_ password: String?)
-    func presentCTA(title: String) 
+    func presentCTA(title: String)
 }
 
 class OnboardingPresenter {

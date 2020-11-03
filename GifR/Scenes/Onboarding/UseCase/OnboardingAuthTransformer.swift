@@ -20,37 +20,58 @@ class OnboardingAuthTransformer {
         self.cache = cache
         self.presenter = presenter
 
+        var failMessage = ""
+
+        if let email = cache.email, !email.isEmpty, email.isValidEmail() {} else {
+            failMessage += "* Email\n"
+        }
+        if let password = cache.password, password.isValidPassword() {} else {
+            failMessage += "* Password (min 6 characters)"
+        }
+
         switch startMode {
-        case .signUp: break
-        case .login: break
+
+        case .signUp:
+
+            if let username = cache.username, !username.isEmpty, username.isValidUsername() {} else {
+                failMessage = "* User name\n" + failMessage
+            }
+
+            guard failMessage.isEmpty else {
+                print("Remaining Requirements" + failMessage)
+                return
+            }
+            handleSignUp()
+
+        case .login:
+
+            guard failMessage.isEmpty else {
+                print("Remaining Requirements" + failMessage)
+                return
+            }
+            handleLogin()
         }
     }
 
     private func handleSignUp() {
 
-        Auth.auth().createUser(withEmail: cache.email!, password: cache.password!) { (authDataResult, error) in
+        FirebaseService.shared.signUp(email: cache.email!, password: cache.password!) { (success, error) in
 
-            if let authDataResult = authDataResult {
-
-
-            }
-            else if let error = error {
-
+            guard success else {
+                print(error)
+                return
             }
         }
     }
 
     private func handleLogin() {
 
-        Auth.auth().signIn(withEmail: cache.email!, password: cache.password!, completion: { (firebaseUser, error) in
+        FirebaseService.shared.login(email: cache.email!, password: cache.password!) { (success, error) in
 
-            if let firebaseUser = firebaseUser {
-
-
+            guard success else {
+                print(error)
+                return
             }
-            else if let error = error {
-
-            }
-        })
+        }
     }
 }
