@@ -1,0 +1,6 @@
+framework module Pods_GifR_GifRUITests {
+  umbrella header "Pods-GifR-GifRUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
