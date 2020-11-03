@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cH4-rw-JwR">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Lae-Oc-rZX">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="cH4-rw-JwR" customClass="OnboardingViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvg-3V-0aT"/>
+                        <viewControllerLayoutGuide type="bottom" id="prc-Pb-eGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6qy-z5-2zk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Bu8-NP-Yq0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bu8-NP-Yq0" secondAttribute="trailing" id="4au-xD-fJy"/>
+                            <constraint firstItem="Bu8-NP-Yq0" firstAttribute="top" secondItem="6qy-z5-2zk" secondAttribute="top" id="9PH-oX-yVq"/>
+                            <constraint firstAttribute="bottom" secondItem="Bu8-NP-Yq0" secondAttribute="bottom" id="Vox-py-tEP"/>
+                            <constraint firstItem="Bu8-NP-Yq0" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leading" id="oSY-BP-Fqp"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hq-VK-Slb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575.20000000000005" y="-9.4452773613193415"/>
+        </scene>
+    </scenes>
+</document>
