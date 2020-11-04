@@ -9,19 +9,24 @@ import Foundation
 
 class Gif {
 
-//    var url: URL?
+    var uid: String?
     var imageOriginalUrl: URL?
 
     init(resource: GifResource) {
         
         let attributes = resource.data
 
-//        if let attributeUrl = attributes.url, let url = URL(string: attributeUrl) {
-//            self.url = url
-//        }
+        if let urlString = attributes.imageOriginalUrl, let url = URL(string: urlString) {
+            imageOriginalUrl = url
+        }
+    }
 
-        if let attributeUrl = attributes.imageOriginalUrl, let url = URL(string: attributeUrl) {
-            self.imageOriginalUrl = url
+    init(uid: String, url: String) {
+
+        self.uid = uid
+
+        if let url = URL(string: url) {
+            imageOriginalUrl = url
         }
     }
 }
