@@ -18,12 +18,12 @@ class HomeBeginTransformer {
             switch result {
 
             case .success(let gif):
-                print("***** Success fetching gif with url: \(gif?.url)")
-                break
+                print("***** Success fetching gif with url: \(gif?.url?.absoluteString)")
+                presenter?.presentGif(url: gif?.imageOriginalUrl)
 
             case .failure(let error):
                 print("***** Failure fetching gif: \(error)")
-                break
+                presenter?.presentOkErrorAlert(title: .oops, message: "There was an error fetching your gif. Maybe try another one?")
             }
         }
     }

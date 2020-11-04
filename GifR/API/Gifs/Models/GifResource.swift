@@ -10,7 +10,8 @@ import Foundation
 struct GifResource: Decodable {
 
     struct Attributes: Decodable {
-        let url: String
+        let url: String?
+        let imageOriginalUrl: String?
     }
 
     let data: Attributes

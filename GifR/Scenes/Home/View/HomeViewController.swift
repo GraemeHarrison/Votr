@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 @objc protocol HomeViewControllerDelegate {
 }
 
-protocol HomePresenterOutput: class {
+protocol HomePresenterOutput: ShowAlert {
+    func showGif(url: URL?) 
 }
 
 class HomeViewController: UIViewController {
@@ -47,4 +49,11 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: HomePresenterOutput {}
+extension HomeViewController: HomePresenterOutput {
+
+    func showGif(url: URL?) {
+
+        imageView.sd_setImage(with: url) { (image, error, _, _) in
+        }
+    }
+}

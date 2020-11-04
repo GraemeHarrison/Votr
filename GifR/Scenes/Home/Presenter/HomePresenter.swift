@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol HomeUseCaseOutput: class {}
+protocol HomeUseCaseOutput: PresentAlert {
+    func presentGif(url: URL?) 
+}
 
 class HomePresenter {
     
@@ -26,7 +28,16 @@ class HomePresenter {
     }
 }
 
-extension HomePresenter: HomeUseCaseOutput {}
+extension HomePresenter: HomeUseCaseOutput {
+
+    var vc: (UIViewController & ShowAlert)? {
+        return viewController as? UIViewController & ShowAlert
+    }
+
+    func presentGif(url: URL?) {
+        viewController?.showGif(url: url)
+    }
+}
 
 extension HomePresenter: HomeRouterOutput {}
 
