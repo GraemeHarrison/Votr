@@ -59,6 +59,18 @@
 		2E3510E32552490000083B2E /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510E22552490000083B2E /* GifService.swift */; };
 		2E3510F125524F3D00083B2E /* HomeLikeGifTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */; };
 		2E35111C2552687C00083B2E /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35111B2552687C00083B2E /* NSError.swift */; };
+		2E35113D2553764900083B2E /* SavedGifs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35112A2553764900083B2E /* SavedGifs.storyboard */; };
+		2E35113E2553764900083B2E /* SavedGifsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35112C2553764900083B2E /* SavedGifsPresenter.swift */; };
+		2E35113F2553764900083B2E /* SavedGifsConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35112E2553764900083B2E /* SavedGifsConnector.swift */; };
+		2E3511402553764900083B2E /* SavedGifsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511322553764900083B2E /* SavedGifsCellProtocol.swift */; };
+		2E3511412553764900083B2E /* SavedGifsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511332553764900083B2E /* SavedGifsCell.swift */; };
+		2E3511422553764900083B2E /* SavedGifsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511342553764900083B2E /* SavedGifsViewModel.swift */; };
+		2E3511432553764900083B2E /* SavedGifsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511352553764900083B2E /* SavedGifsAdapter.swift */; };
+		2E3511442553764900083B2E /* SavedGifsCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511362553764900083B2E /* SavedGifsCellConfigurator.swift */; };
+		2E3511452553764900083B2E /* SavedGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511372553764900083B2E /* SavedGifsViewController.swift */; };
+		2E3511462553764900083B2E /* SavedGifsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511392553764900083B2E /* SavedGifsUseCase.swift */; };
+		2E3511472553764900083B2E /* SavedGifsBeginTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35113A2553764900083B2E /* SavedGifsBeginTransformer.swift */; };
+		2E3511482553764900083B2E /* SavedGifsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35113C2553764900083B2E /* SavedGifsRouter.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -141,6 +153,18 @@
 		2E3510E22552490000083B2E /* GifService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
 		2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLikeGifTransformer.swift; sourceTree = "<group>"; };
 		2E35111B2552687C00083B2E /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		2E35112A2553764900083B2E /* SavedGifs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavedGifs.storyboard; sourceTree = "<group>"; };
+		2E35112C2553764900083B2E /* SavedGifsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsPresenter.swift; sourceTree = "<group>"; };
+		2E35112E2553764900083B2E /* SavedGifsConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsConnector.swift; sourceTree = "<group>"; };
+		2E3511322553764900083B2E /* SavedGifsCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsCellProtocol.swift; sourceTree = "<group>"; };
+		2E3511332553764900083B2E /* SavedGifsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsCell.swift; sourceTree = "<group>"; };
+		2E3511342553764900083B2E /* SavedGifsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsViewModel.swift; sourceTree = "<group>"; };
+		2E3511352553764900083B2E /* SavedGifsAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsAdapter.swift; sourceTree = "<group>"; };
+		2E3511362553764900083B2E /* SavedGifsCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsCellConfigurator.swift; sourceTree = "<group>"; };
+		2E3511372553764900083B2E /* SavedGifsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsViewController.swift; sourceTree = "<group>"; };
+		2E3511392553764900083B2E /* SavedGifsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsUseCase.swift; sourceTree = "<group>"; };
+		2E35113A2553764900083B2E /* SavedGifsBeginTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsBeginTransformer.swift; sourceTree = "<group>"; };
+		2E35113C2553764900083B2E /* SavedGifsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsRouter.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +288,7 @@
 				2E350EDC2550DF6100083B2E /* Intro */,
 				2E350EA92550DD8400083B2E /* Onboarding */,
 				2E350F832551058400083B2E /* Home */,
+				2E3511292553764900083B2E /* SavedGifs */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -540,6 +565,81 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		2E3511292553764900083B2E /* SavedGifs */ = {
+			isa = PBXGroup;
+			children = (
+				2E35112A2553764900083B2E /* SavedGifs.storyboard */,
+				2E35112F2553764900083B2E /* View */,
+				2E35112B2553764900083B2E /* Presenter */,
+				2E3511382553764900083B2E /* UseCase */,
+				2E35113B2553764900083B2E /* Router */,
+				2E35112D2553764900083B2E /* Connector */,
+			);
+			path = SavedGifs;
+			sourceTree = "<group>";
+		};
+		2E35112B2553764900083B2E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2E35112C2553764900083B2E /* SavedGifsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2E35112D2553764900083B2E /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				2E35112E2553764900083B2E /* SavedGifsConnector.swift */,
+			);
+			path = Connector;
+			sourceTree = "<group>";
+		};
+		2E35112F2553764900083B2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E3511372553764900083B2E /* SavedGifsViewController.swift */,
+				2E3511302553764900083B2E /* CollectionView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E3511302553764900083B2E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2E3511352553764900083B2E /* SavedGifsAdapter.swift */,
+				2E3511362553764900083B2E /* SavedGifsCellConfigurator.swift */,
+				2E3511322553764900083B2E /* SavedGifsCellProtocol.swift */,
+				2E3511312553764900083B2E /* Cells */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		2E3511312553764900083B2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2E3511342553764900083B2E /* SavedGifsViewModel.swift */,
+				2E3511332553764900083B2E /* SavedGifsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2E3511382553764900083B2E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2E3511392553764900083B2E /* SavedGifsUseCase.swift */,
+				2E35113A2553764900083B2E /* SavedGifsBeginTransformer.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2E35113B2553764900083B2E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2E35113C2553764900083B2E /* SavedGifsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +756,7 @@
 				2E350EBD2550DD8400083B2E /* Onboarding.storyboard in Resources */,
 				2E350F052550E4F100083B2E /* OnboardingTextFieldCell.xib in Resources */,
 				2E3510642552201900083B2E /* get_gif.json in Resources */,
+				2E35113D2553764900083B2E /* SavedGifs.storyboard in Resources */,
 				2E350EE62550DFAE00083B2E /* Intro.storyboard in Resources */,
 				2E350F912551058400083B2E /* Home.storyboard in Resources */,
 			);
@@ -791,12 +892,17 @@
 				2E350F752550FAD300083B2E /* FirebaseService.swift in Sources */,
 				2E35108E255236E300083B2E /* GifDeserializer.swift in Sources */,
 				2E350EDE2550DF7600083B2E /* IntroViewController.swift in Sources */,
+				2E3511462553764900083B2E /* SavedGifsUseCase.swift in Sources */,
 				2E3510F125524F3D00083B2E /* HomeLikeGifTransformer.swift in Sources */,
+				2E3511472553764900083B2E /* SavedGifsBeginTransformer.swift in Sources */,
 				2E350F7A2551038100083B2E /* String.swift in Sources */,
 				2E350EC62550DD8400083B2E /* OnboardingUseCase.swift in Sources */,
+				2E35113E2553764900083B2E /* SavedGifsPresenter.swift in Sources */,
+				2E35113F2553764900083B2E /* SavedGifsConnector.swift in Sources */,
 				2E350F412550F36200083B2E /* OnboardingAuthTransformer.swift in Sources */,
 				2E350F942551058400083B2E /* HomeUseCase.swift in Sources */,
 				2E350F932551058400083B2E /* HomeViewController.swift in Sources */,
+				2E3511482553764900083B2E /* SavedGifsRouter.swift in Sources */,
 				2E350ED52550DE0B00083B2E /* Cells.swift in Sources */,
 				2E35105925511BB000083B2E /* GifClient.swift in Sources */,
 				2E3510892552361500083B2E /* APIDeserializer.swift in Sources */,
@@ -805,6 +911,7 @@
 				2E350EC42550DD8400083B2E /* OnboardingAdapter.swift in Sources */,
 				2E350EC02550DD8400083B2E /* OnboardingCellProtocol.swift in Sources */,
 				2E35111C2552687C00083B2E /* NSError.swift in Sources */,
+				2E3511412553764900083B2E /* SavedGifsCell.swift in Sources */,
 				2E350F922551058400083B2E /* HomeConnector.swift in Sources */,
 				2E350FA4255107D800083B2E /* ShowAlert.swift in Sources */,
 				2E3510842552354000083B2E /* Gif.swift in Sources */,
@@ -817,14 +924,19 @@
 				2E350EC72550DD8400083B2E /* OnboardingBeginTransformer.swift in Sources */,
 				2E350EC52550DD8400083B2E /* OnboardingViewController.swift in Sources */,
 				2E350F962551058400083B2E /* HomeRouter.swift in Sources */,
+				2E3511452553764900083B2E /* SavedGifsViewController.swift in Sources */,
 				2E3510C6255247C700083B2E /* AuthService.swift in Sources */,
 				2E350EC82550DD8400083B2E /* OnboardingRouter.swift in Sources */,
 				2E3510E32552490000083B2E /* GifService.swift in Sources */,
+				2E3511432553764900083B2E /* SavedGifsAdapter.swift in Sources */,
 				2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */,
+				2E3511442553764900083B2E /* SavedGifsCellConfigurator.swift in Sources */,
+				2E3511422553764900083B2E /* SavedGifsViewModel.swift in Sources */,
 				2E350EC22550DD8400083B2E /* OnboardingViewModel.swift in Sources */,
 				2E350DF82550CBDD00083B2E /* AppDelegate.swift in Sources */,
 				2E350F582550F71000083B2E /* User.swift in Sources */,
 				2E350F952551058400083B2E /* HomeBeginTransformer.swift in Sources */,
+				2E3511402553764900083B2E /* SavedGifsCellProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
