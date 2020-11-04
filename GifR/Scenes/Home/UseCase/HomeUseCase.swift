@@ -18,4 +18,9 @@ class HomeUseCase {
         let transformer = HomeBeginTransformer()
         transformer.transform(presenter: presenter)
     }
+
+    func randomGifTapped() {
+
+        begin()
+    }
 }

@@ -26,6 +26,10 @@ class HomePresenter {
     func eventViewReady() {
         useCase.begin()
     }
+
+    func eventRandomGifTapped() {
+        useCase.randomGifTapped()
+    }
 }
 
 extension HomePresenter: HomeUseCaseOutput {

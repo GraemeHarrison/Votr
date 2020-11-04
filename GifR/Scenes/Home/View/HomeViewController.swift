@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func randomGifTapped(_ sender: Any) {
-
+        presenter.eventRandomGifTapped()
     }
 }
 
