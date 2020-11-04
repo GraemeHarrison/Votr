@@ -525,8 +525,8 @@
 			isa = PBXGroup;
 			children = (
 				2E35105825511BB000083B2E /* GifClient.swift */,
-				2E3510412551190700083B2E /* GifRouter.swift */,
 				2E35108D255236E300083B2E /* GifDeserializer.swift */,
+				2E3510412551190700083B2E /* GifRouter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
