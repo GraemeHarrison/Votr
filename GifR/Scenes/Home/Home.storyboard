@@ -9,7 +9,7 @@
         <!--Home View Controller-->
         <scene sceneID="Lae-Oc-rZX">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="cH4-rw-JwR" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="cH4-rw-JwR" customClass="HomeViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvg-3V-0aT"/>
                         <viewControllerLayoutGuide type="bottom" id="prc-Pb-eGC"/>

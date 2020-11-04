@@ -22,7 +22,7 @@ class FirebaseService {
         case users
     }
 
-    typealias Result = (Bool, Error?) -> ()
+    typealias Result = (Bool, Error?) -> Void
 
     static let shared = FirebaseService()
 
@@ -30,6 +30,22 @@ class FirebaseService {
     private var ref: DatabaseReference! { return Database.database().reference() }
 
     private init() {}
+
+    func observeAuthState(loggedIn: @escaping (Bool) -> Void) {
+
+        Auth.auth().addStateDidChangeListener { (auth, authenticatedUser) in
+
+            if let user = authenticatedUser {
+
+                self.fetchUser(uid: user.uid) { (success, error) in
+                    loggedIn(success)
+                }
+            }
+            else {
+                loggedIn(false)
+            }
+        }
+    }
 
     func login(email: String, password: String, completion: @escaping Result) {
 
@@ -77,6 +93,7 @@ class FirebaseService {
                 return
             }
             self.currentUser = User(dictionary: userDict)
+            print("***** current user: \(self.currentUser!.username!)")
             completion(true, nil)
 
         }) { (error) in

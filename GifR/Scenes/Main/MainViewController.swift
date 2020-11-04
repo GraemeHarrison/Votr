@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
@@ -27,7 +28,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        showInitialController(storyboard: .intro)
+        determineEntryScene()
+    }
+
+    private func determineEntryScene() {
+
+        FirebaseService.shared.observeAuthState { (loggedIn) in
+            self.showInitialController(storyboard: loggedIn ? .home : .intro)
+        }
     }
 
     private func showInitialController(storyboard: Storyboard) {
@@ -44,7 +52,7 @@ class MainViewController: UIViewController {
         }
         showInitialController(storyboard: storyboard)
     }
-
+    
     private func showViewController(_ viewController: UIViewController) {
 
         addChild(viewController)

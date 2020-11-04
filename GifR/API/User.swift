@@ -25,8 +25,8 @@ class User {
 
     init(dictionary: [AnyHashable: Any]) {
 
-        uid = dictionary[Key.uid] as? String
-        username = dictionary[Key.username] as? String
+        uid = dictionary[Key.uid.rawValue] as? String
+        username = dictionary[Key.username.rawValue] as? String
     }
 }
 
