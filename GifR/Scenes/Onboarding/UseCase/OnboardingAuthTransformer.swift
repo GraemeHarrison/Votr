@@ -55,7 +55,7 @@ class OnboardingAuthTransformer {
 
     private func handleSignUp() {
 
-        FirebaseService.shared.signUp(email: cache.email!, password: cache.password!, username: cache.username!) { (success, error) in
+        AuthService.shared.signUp(email: cache.email!, password: cache.password!, username: cache.username!) { (success, error) in
 
             guard success else {
                 print(String(describing: error))
@@ -68,7 +68,7 @@ class OnboardingAuthTransformer {
 
     private func handleLogin() {
 
-        FirebaseService.shared.login(email: cache.email!, password: cache.password!) { (success, error) in
+        AuthService.shared.login(email: cache.email!, password: cache.password!) { (success, error) in
 
             guard success else {
                 print(String(describing: error))

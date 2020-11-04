@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
 
     private func determineEntryScene() {
 
-        FirebaseService.shared.observeAuthState { (loggedIn) in
+        AuthService.shared.observeAuthState { (loggedIn) in
             self.showInitialController(storyboard: loggedIn ? .home : .intro)
         }
     }

@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func likeTapped(_ sender: Any) {
-
+        presenter.eventLikeTapped()
     }
 
     @IBAction func randomGifTapped(_ sender: Any) {

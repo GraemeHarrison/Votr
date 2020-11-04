@@ -51,11 +51,13 @@
 		2E35105025511A7900083B2E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35104F25511A7900083B2E /* APIClient.swift */; };
 		2E35105925511BB000083B2E /* GifClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35105825511BB000083B2E /* GifClient.swift */; };
 		2E3510642552201900083B2E /* get_gif.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3510632552201900083B2E /* get_gif.json */; };
-		2E3510712552270800083B2E /* get_gifs.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3510702552270800083B2E /* get_gifs.json */; };
 		2E35107C2552348400083B2E /* GifResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35107B2552348400083B2E /* GifResource.swift */; };
 		2E3510842552354000083B2E /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510832552354000083B2E /* Gif.swift */; };
 		2E3510892552361500083B2E /* APIDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510882552361500083B2E /* APIDeserializer.swift */; };
 		2E35108E255236E300083B2E /* GifDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35108D255236E300083B2E /* GifDeserializer.swift */; };
+		2E3510C6255247C700083B2E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510C5255247C700083B2E /* AuthService.swift */; };
+		2E3510E32552490000083B2E /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510E22552490000083B2E /* GifService.swift */; };
+		2E3510F125524F3D00083B2E /* HomeLikeGifTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -130,11 +132,13 @@
 		2E35104F25511A7900083B2E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		2E35105825511BB000083B2E /* GifClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifClient.swift; sourceTree = "<group>"; };
 		2E3510632552201900083B2E /* get_gif.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_gif.json; sourceTree = "<group>"; };
-		2E3510702552270800083B2E /* get_gifs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_gifs.json; sourceTree = "<group>"; };
 		2E35107B2552348400083B2E /* GifResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifResource.swift; sourceTree = "<group>"; };
 		2E3510832552354000083B2E /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		2E3510882552361500083B2E /* APIDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDeserializer.swift; sourceTree = "<group>"; };
 		2E35108D255236E300083B2E /* GifDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDeserializer.swift; sourceTree = "<group>"; };
+		2E3510C5255247C700083B2E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2E3510E22552490000083B2E /* GifService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
+		2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLikeGifTransformer.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -323,7 +327,6 @@
 				2E350EB52550DD8400083B2E /* OnboardingCellConfigurator.swift */,
 				2E350EB62550DD8400083B2E /* OnboardingAdapter.swift */,
 				2E350EB22550DD8400083B2E /* OnboardingCellProtocol.swift */,
-				2E350EB42550DD8400083B2E /* OnboardingViewModel.swift */,
 				2E350EB12550DD8400083B2E /* Cells */,
 			);
 			path = TableView;
@@ -332,6 +335,7 @@
 		2E350EB12550DD8400083B2E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2E350EB42550DD8400083B2E /* OnboardingViewModel.swift */,
 				2E350F242550F10900083B2E /* CTA */,
 				2E350F032550E4DD00083B2E /* TextField */,
 			);
@@ -454,6 +458,7 @@
 			children = (
 				2E350F8C2551058400083B2E /* HomeUseCase.swift */,
 				2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */,
+				2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -479,8 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				2E35104F25511A7900083B2E /* APIClient.swift */,
-				2E35103C2551185200083B2E /* APIRouter.swift */,
 				2E3510882552361500083B2E /* APIDeserializer.swift */,
+				2E35103C2551185200083B2E /* APIRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -489,6 +494,8 @@
 			isa = PBXGroup;
 			children = (
 				2E350F742550FAD300083B2E /* FirebaseService.swift */,
+				2E3510C5255247C700083B2E /* AuthService.swift */,
+				2E3510E22552490000083B2E /* GifService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -506,8 +513,6 @@
 			children = (
 				2E3510A625523B6400083B2E /* Services */,
 				2E3510A525523B5200083B2E /* Models */,
-				2E3510632552201900083B2E /* get_gif.json */,
-				2E3510702552270800083B2E /* get_gifs.json */,
 			);
 			path = Gifs;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 			children = (
 				2E3510832552354000083B2E /* Gif.swift */,
 				2E35107B2552348400083B2E /* GifResource.swift */,
+				2E3510632552201900083B2E /* get_gif.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -639,7 +645,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3510712552270800083B2E /* get_gifs.json in Resources */,
 				2E350E042550CBE000083B2E /* LaunchScreen.storyboard in Resources */,
 				2E350E012550CBE000083B2E /* Assets.xcassets in Resources */,
 				2E350F9E2551071B00083B2E /* GoogleService-Info.plist in Resources */,
@@ -783,6 +788,7 @@
 				2E350F752550FAD300083B2E /* FirebaseService.swift in Sources */,
 				2E35108E255236E300083B2E /* GifDeserializer.swift in Sources */,
 				2E350EDE2550DF7600083B2E /* IntroViewController.swift in Sources */,
+				2E3510F125524F3D00083B2E /* HomeLikeGifTransformer.swift in Sources */,
 				2E350F7A2551038100083B2E /* String.swift in Sources */,
 				2E350EC62550DD8400083B2E /* OnboardingUseCase.swift in Sources */,
 				2E350F412550F36200083B2E /* OnboardingAuthTransformer.swift in Sources */,
@@ -807,7 +813,9 @@
 				2E350EC72550DD8400083B2E /* OnboardingBeginTransformer.swift in Sources */,
 				2E350EC52550DD8400083B2E /* OnboardingViewController.swift in Sources */,
 				2E350F962551058400083B2E /* HomeRouter.swift in Sources */,
+				2E3510C6255247C700083B2E /* AuthService.swift in Sources */,
 				2E350EC82550DD8400083B2E /* OnboardingRouter.swift in Sources */,
+				2E3510E32552490000083B2E /* GifService.swift in Sources */,
 				2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */,
 				2E350EC22550DD8400083B2E /* OnboardingViewModel.swift in Sources */,
 				2E350DF82550CBDD00083B2E /* AppDelegate.swift in Sources */,

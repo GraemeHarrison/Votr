@@ -27,6 +27,10 @@ class HomePresenter {
         useCase.begin()
     }
 
+    func eventLikeTapped() {
+        useCase.likeTapped()
+    }
+
     func eventRandomGifTapped() {
         useCase.randomGifTapped()
     }

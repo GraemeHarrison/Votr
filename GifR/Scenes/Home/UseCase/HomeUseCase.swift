@@ -8,7 +8,11 @@
 import Foundation
 
 class HomeUseCase {
-    
+
+    class Cache {
+        var currentGif: Gif?
+    }
+    private var cache = Cache()
     weak var presenter: HomeUseCaseOutput?
     
     init() {}
@@ -16,11 +20,16 @@ class HomeUseCase {
     func begin() {
 
         let transformer = HomeBeginTransformer()
-        transformer.transform(presenter: presenter)
+        transformer.transform(cache: cache, presenter: presenter)
     }
 
     func randomGifTapped() {
-
         begin()
+    }
+
+    func likeTapped() {
+
+        let transformer = HomeLikeGifTransformer()
+        transformer.transform(cache: cache, presenter: presenter)
     }
 }

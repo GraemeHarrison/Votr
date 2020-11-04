@@ -18,7 +18,7 @@ protocol HomeRouterOutput: class {}
 class HomeRouter {
 
     enum Segue: String {
-        case showNext
+        case temp
     }
 
     weak var presenter: HomeRouterOutput!
@@ -26,10 +26,6 @@ class HomeRouter {
 
     init(navigationSource: HomeNavigationSource) {
         self.navigationSource = navigationSource
-    }
-    
-    func transitionToNext() {
-        performSegue(.showNext, sender: nil)
     }
 
     private func performSegue(_ segue: Segue, sender: Any?) {
@@ -40,11 +36,9 @@ class HomeRouter {
 
         switch Segue(rawValue: segue.identifier!)! {
 
-        case .showNext:
-            break
+        case .temp: break
         }
     }
-
 }
 
 extension HomeViewController: HomeNavigationSource {
