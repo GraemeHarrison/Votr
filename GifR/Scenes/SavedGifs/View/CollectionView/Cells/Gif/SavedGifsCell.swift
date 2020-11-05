@@ -20,7 +20,7 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
 
     func show(viewModel: SavedGifsViewModel, collectionView: UICollectionView, at indexPath: IndexPath, presenter: SavedGifsPresenter) -> SavedGifsCellProtocol {
 
-        guard case .gif(let url) = viewModel else { fatalError() }
+        guard case .gif(let url, _, _) = viewModel else { fatalError() }
 
         self.presenter = presenter
         self.collectionView = collectionView

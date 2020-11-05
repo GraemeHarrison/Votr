@@ -11,8 +11,9 @@ struct GifResource: Decodable {
 
     struct Attributes: Decodable {
         
-//        let url: String?
         let imageOriginalUrl: String?
+        let imageWidth: String?
+        let imageHeight: String?
     }
 
     let data: Attributes

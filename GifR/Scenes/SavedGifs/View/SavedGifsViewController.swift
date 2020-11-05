@@ -45,7 +45,11 @@ class SavedGifsViewController: UIViewController {
     }
 
     private func configureCollectionView() {
+
         collectionView.registerCells([SavedGifsCell.self])
+        let customLayout = CustomCollectionViewLayout()
+        customLayout.delegate = adapter
+        collectionView.collectionViewLayout = customLayout
     }
 }
 

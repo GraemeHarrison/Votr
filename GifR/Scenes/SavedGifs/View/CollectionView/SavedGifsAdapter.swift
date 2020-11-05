@@ -31,17 +31,27 @@ extension SavedGifsAdapter: UICollectionViewDataSource {
     }
 }
 
-extension SavedGifsAdapter: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
-}
-
 extension SavedGifsAdapter: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let length = collectionView.bounds.size.width
         return CGSize(width: length, height: length)
+    }
+}
+
+extension SavedGifsAdapter: CustomCollectionViewLayoutDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, heightForGifAtIndexPath indexPath: IndexPath) -> CGFloat {
+
+        guard case .gif(_, let width, let height) = presenter.viewModel(at: indexPath.item),
+              let h = height,
+              let w = width else {
+            return 50
+        }
+
+        let columnWidth = collectionView.bounds.width/2
+        let ratio = columnWidth/w
+        return h * ratio
     }
 }

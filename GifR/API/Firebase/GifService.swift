@@ -31,8 +31,10 @@ class GifService: FirebaseService {
 
         let gifs = children.compactMap { child -> Gif? in
             
-            if let value = child.value as? String {
-                return Gif(uid: child.key, url: value)
+            if let value = child.value as? [AnyHashable: Any] {
+                let gif = Gif(dictionary: value)
+                gif.uid = child.key
+                return gif
             }
             return nil
         }
@@ -41,12 +43,7 @@ class GifService: FirebaseService {
 
     func likeGif(_ gif: Gif, completion: @escaping SuccessResult) {
 
-        guard let url = gif.imageOriginalUrl?.absoluteString else {
-            completion(false, nil)
-            return
-        }
-
-        ref.child(.gifs).child(user.uid).childByAutoId().setValue(url) { (error, _) in
+        ref.child(.gifs).child(user.uid).childByAutoId().setValue(gif.toDictionary()) { (error, _) in
             completion(error == nil, error)
         }
     }
