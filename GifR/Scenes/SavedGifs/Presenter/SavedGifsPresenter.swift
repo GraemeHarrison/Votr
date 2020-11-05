@@ -12,7 +12,8 @@ protocol SavedGifsUseCaseOutput: PresentAlert {
 
     func presentModelListBegin()
     func presentModelListEnd()
-    func presentGif(url: URL?) 
+    func presentGif(url: URL?)
+    func presentShareSheet(gifUrl: URL) 
 }
 
 class SavedGifsPresenter {
@@ -30,6 +31,10 @@ class SavedGifsPresenter {
     
     func eventViewReady() {
         useCase.begin()
+    }
+
+    func eventShareGifTapped(url: URL) {
+        useCase.shareGifTapped(url: url)
     }
 }
 
@@ -49,6 +54,10 @@ extension SavedGifsPresenter: SavedGifsUseCaseOutput {
 
     func presentGif(url: URL?) {
         viewModels.append(.gif(url: url))
+    }
+
+    func presentShareSheet(gifUrl: URL) {
+        viewController?.showShareSheet(subject: "You gotta see this...", body: "Check out this awesome gif!", gifUrl: gifUrl)
     }
 }
 

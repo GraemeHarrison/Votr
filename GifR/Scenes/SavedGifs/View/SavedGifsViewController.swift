@@ -11,6 +11,7 @@ import UIKit
 
 protocol SavedGifsPresenterOutput: ShowAlert {
     func showModels()
+    func showShareSheet(subject: String, body: String, gifUrl: URL) 
 }
 
 class SavedGifsViewController: UIViewController {
@@ -52,5 +53,15 @@ extension SavedGifsViewController: SavedGifsPresenterOutput {
 
     func showModels() {
         collectionView.reloadData()
+    }
+
+    func showShareSheet(subject: String, body: String, gifUrl: URL) {
+
+        let shareSheet = UIActivityViewController(activityItems: [body, gifUrl], applicationActivities: nil)
+        shareSheet.setValue(subject, forKey: "Subject")
+        shareSheet.configurePopover(with: view)
+        present(shareSheet, animated: true, completion: nil)
+        shareSheet.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+        }
     }
 }

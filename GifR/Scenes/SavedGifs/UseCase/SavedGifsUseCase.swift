@@ -16,4 +16,8 @@ class SavedGifsUseCase {
         let transformer = SavedGifsBeginTransformer()
         transformer.transform(presenter: presenter)
     }
+
+    func shareGifTapped(url: URL) {
+        presenter?.presentShareSheet(gifUrl: url)
+    }
 }

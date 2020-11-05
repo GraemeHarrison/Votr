@@ -16,6 +16,7 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
     fileprivate weak var presenter: SavedGifsPresenter!
     fileprivate weak var collectionView: UICollectionView!
     fileprivate var indexPath: IndexPath!
+    private var gifUrl: URL?
 
     func show(viewModel: SavedGifsViewModel, collectionView: UICollectionView, at indexPath: IndexPath, presenter: SavedGifsPresenter) -> SavedGifsCellProtocol {
 
@@ -24,7 +25,8 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
         self.presenter = presenter
         self.collectionView = collectionView
         self.indexPath = indexPath
-
+        self.gifUrl = url
+        shareButton.isEnabled = url != nil
         imageView.sd_setImage(with: url) { (image, error, _, _) in
             
         }
@@ -32,5 +34,6 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
+        presenter?.eventShareGifTapped(url: gifUrl!)
     }
 }
