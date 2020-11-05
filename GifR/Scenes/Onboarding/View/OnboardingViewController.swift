@@ -18,7 +18,8 @@ protocol OnboardingViewControllerDelegate: class {}
 protocol OnboardingPresenterOutput: ShowAlert {
 
     func showModels()
-    func showEndEditing() 
+    func showEndEditing()
+    func showTitle(_ title: String) 
 }
 
 class OnboardingViewController: UIViewController {
@@ -74,5 +75,9 @@ extension OnboardingViewController: OnboardingPresenterOutput {
 
     func showEndEditing() {
         view.endEditing(true)
+    }
+
+    func showTitle(_ title: String) {
+        self.title = title
     }
 }

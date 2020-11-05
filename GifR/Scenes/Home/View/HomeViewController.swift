@@ -8,8 +8,7 @@
 import UIKit
 import SDWebImage
 
-@objc protocol HomeViewControllerDelegate {
-}
+protocol HomeViewControllerDelegate: class {}
 
 protocol HomePresenterOutput: ShowAlert {
     func showGif(url: URL?) 
@@ -23,7 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var randomGifButton: CTAButton!
 
     var presenter: HomePresenter!
-    private(set) var delegate: HomeViewControllerDelegate?
+    private(set) weak var delegate: HomeViewControllerDelegate?
 
     func setParameters(delegate: HomeViewControllerDelegate) {
         self.delegate = delegate
@@ -38,6 +37,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        title = "Vot'r"
         likeButton.style = .red
         randomGifButton.style = .blue
         configureNavBar()

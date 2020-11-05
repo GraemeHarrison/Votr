@@ -27,6 +27,7 @@ class OnboardingBeginTransformer {
 
     private func presentSignUpUI() {
 
+        presenter?.presentTitle("Sign Up")
         presenter?.presentUsernameInput(nil)
         presenter?.presentEmailInput(nil)
         presenter?.presentPasswordInput(nil)
@@ -35,6 +36,7 @@ class OnboardingBeginTransformer {
 
     private func presentLoginUI() {
 
+        presenter?.presentTitle("Login")
         presenter?.presentEmailInput(nil)
         presenter?.presentPasswordInput(nil)
         presenter?.presentCTA(title: "Login")

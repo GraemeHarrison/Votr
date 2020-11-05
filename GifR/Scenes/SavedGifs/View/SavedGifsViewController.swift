@@ -7,24 +7,7 @@
 
 import UIKit
 
-extension UINavigationBar {
-    func installBlurEffect() {
-        isTranslucent = true
-        setBackgroundImage(UIImage(), for: .default)
-        let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
-        var blurFrame = bounds
-        blurFrame.size.height += statusBarHeight
-        blurFrame.origin.y -= statusBarHeight
-        let blurView  = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        blurView.isUserInteractionEnabled = false
-        blurView.frame = blurFrame
-        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(blurView)
-        blurView.layer.zPosition = -1
-    }
-}
-
-@objc protocol SavedGifsViewControllerDelegate {}
+protocol SavedGifsViewControllerDelegate: class {}
 
 protocol SavedGifsPresenterOutput: ShowAlert {
     func showModels()
@@ -42,7 +25,7 @@ class SavedGifsViewController: UIViewController {
 
     fileprivate var adapter = SavedGifsAdapter()
     var presenter: SavedGifsPresenter!
-    private(set) var delegate: SavedGifsViewControllerDelegate?
+    private(set) weak var delegate: SavedGifsViewControllerDelegate?
 
     func setParameters(delegate: SavedGifsViewControllerDelegate) {
         self.delegate = delegate
@@ -57,7 +40,7 @@ class SavedGifsViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-//        navigationController?.navigationBar.installBlurEffect()
+        title = "Saved Gifs"
         configureCollectionView()
         presenter.eventViewReady()
     }

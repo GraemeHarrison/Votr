@@ -22,14 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureGlobalNavBar() {
 
-        let titleAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.blue, .font: UIFont.bold]
+        let titleAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.voteRed, .font: UIFont.bold]
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = titleAttributes
-        appearance.tintColor = UIColor.blue
-//        appearance.backgroundColor = .white
-//        appearance.isOpaque = true
-//        appearance.isTranslucent = false
-
+        appearance.tintColor = .voteBlue
         appearance.shadowImage = UIImage()
         appearance.setBackgroundImage(UIImage(), for: .default)
         appearance.isTranslucent = true

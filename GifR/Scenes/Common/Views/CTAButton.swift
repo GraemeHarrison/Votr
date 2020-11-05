@@ -81,10 +81,10 @@ class CTAButton: UIButton {
         switch style {
 
         case .red:
-            super.backgroundColor = .red
+            super.backgroundColor = .voteRed
 
         case .blue:
-            super.backgroundColor = .blue
+            super.backgroundColor = .voteBlue
         }
     }
 

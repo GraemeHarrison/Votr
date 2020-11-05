@@ -54,6 +54,8 @@ class CustomTextField: UITextField {
         super.textColor = .black
         super.font =  .body
         super.borderStyle = .roundedRect
+
+        super.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [.foregroundColor: UIColor.lightGray])
     }
 
     public override init(frame: CGRect = CGRect.zero ) {

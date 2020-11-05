@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-K1-bFv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="550"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAF-8L-geu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="550"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H6v-ki-93n">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -63,15 +63,15 @@
                             <constraint firstItem="8fK-ed-lDI" firstAttribute="top" secondItem="xvg-3V-0aT" secondAttribute="bottom" id="H0T-BF-qvC"/>
                             <constraint firstItem="63l-wi-2fr" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leadingMargin" constant="24" id="Q9n-4u-Y1A"/>
                             <constraint firstItem="mAF-8L-geu" firstAttribute="bottom" secondItem="rHg-K1-bFv" secondAttribute="bottom" id="R6N-E3-Ofh"/>
-                            <constraint firstItem="rHg-K1-bFv" firstAttribute="top" secondItem="6qy-z5-2zk" secondAttribute="top" id="Tgl-ty-wes"/>
+                            <constraint firstItem="rHg-K1-bFv" firstAttribute="top" secondItem="xvg-3V-0aT" secondAttribute="bottom" id="Tgl-ty-wes"/>
                             <constraint firstItem="rHg-K1-bFv" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leading" id="UGa-vI-Hff"/>
                             <constraint firstAttribute="trailingMargin" secondItem="63l-wi-2fr" secondAttribute="trailing" constant="24" id="Wdr-xw-dlA"/>
                             <constraint firstItem="mAF-8L-geu" firstAttribute="leading" secondItem="rHg-K1-bFv" secondAttribute="leading" id="YnK-aF-gQA"/>
                             <constraint firstItem="8fK-ed-lDI" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leading" id="gVN-rG-DeF"/>
-                            <constraint firstAttribute="bottom" secondItem="rHg-K1-bFv" secondAttribute="bottom" id="hOn-jb-bRo"/>
                             <constraint firstAttribute="trailing" secondItem="rHg-K1-bFv" secondAttribute="trailing" id="iH6-35-mpU"/>
                             <constraint firstItem="prc-Pb-eGC" firstAttribute="top" secondItem="kLG-Cl-YZ7" secondAttribute="bottom" constant="48" id="iQc-5j-d38"/>
                             <constraint firstItem="kLG-Cl-YZ7" firstAttribute="top" secondItem="63l-wi-2fr" secondAttribute="bottom" constant="24" id="idi-sy-KOP"/>
+                            <constraint firstItem="rHg-K1-bFv" firstAttribute="bottom" secondItem="8fK-ed-lDI" secondAttribute="bottom" id="mod-dX-7ID"/>
                             <constraint firstItem="kLG-Cl-YZ7" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leadingMargin" constant="24" id="rZA-6E-ojV"/>
                             <constraint firstItem="mAF-8L-geu" firstAttribute="trailing" secondItem="rHg-K1-bFv" secondAttribute="trailing" id="yLo-7T-BCr"/>
                         </constraints>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hq-VK-Slb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="-10"/>
+            <point key="canvasLocation" x="1305.7971014492755" y="-10.044642857142856"/>
         </scene>
         <!--SavedGifs-->
         <scene sceneID="9bF-rY-3sm">

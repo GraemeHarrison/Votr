@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,22 +43,24 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2D-1Q-tSG">
-                                <rect key="frame" x="24" y="548" width="366" height="68.5"/>
+                                <rect key="frame" x="24" y="548" width="366" height="89"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Politcal gifs for political goofs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mr-Hu-gtG">
-                                        <rect key="frame" x="0.0" y="48" width="366" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mr-Hu-gtG">
+                                        <rect key="frame" x="0.0" y="48" width="366" height="41"/>
+                                        <string key="text">Practical Gifs For Political Goofs
+Swinging One Vote At A Time</string>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.36220955849999997" blue="0.78177636859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="vote-blue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Vot'r" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-on-JRb">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                        <color key="textColor" red="0.72614353899999995" green="0.033713910729999998" blue="0.074948079880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="vote-red"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4Mr-Hu-gtG" secondAttribute="trailing" id="0Xo-d4-6he"/>
                                     <constraint firstItem="4Mr-Hu-gtG" firstAttribute="top" secondItem="NGB-on-JRb" secondAttribute="bottom" constant="12" id="5Um-qi-NYC"/>
@@ -71,7 +73,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6pL-Wm-nCX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6pL-Wm-nCX" firstAttribute="bottom" secondItem="E3P-Fj-uQF" secondAttribute="bottom" constant="48" id="8iY-S7-M9f"/>
                             <constraint firstItem="Xs2-5m-nf1" firstAttribute="width" secondItem="Xs2-5m-nf1" secondAttribute="height" id="A7C-fJ-KYh"/>
@@ -120,8 +122,11 @@
     </scenes>
     <resources>
         <image name="Icon-1024" width="1024" height="1024"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="vote-blue">
+            <color red="0.043137254901960784" green="0.46274509803921571" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="vote-red">
+            <color red="0.92549019607843142" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
