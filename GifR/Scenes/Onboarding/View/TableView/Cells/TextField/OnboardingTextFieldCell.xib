@@ -11,23 +11,28 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OnboardingTextFieldCell" rowHeight="74" id="CrC-Z8-9R4" customClass="OnboardingTextFieldCell" customModule="GifR" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CrC-Z8-9R4" id="wRl-ML-hgO">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CrC-Z8-9R4" id="wRl-ML-hgO">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="280-nK-qvV">
-                        <rect key="frame" x="16" y="0.0" width="382" height="74"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="280-nK-qvV" customClass="CustomTextField" customModule="GifR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="382" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="pAO-MR-BTG"/>
+                        </constraints>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="280-nK-qvV" secondAttribute="trailing" constant="16" id="2mq-T5-fBt"/>
-                    <constraint firstAttribute="bottom" secondItem="280-nK-qvV" secondAttribute="bottom" id="MvT-2S-GFf"/>
+                    <constraint firstAttribute="bottom" secondItem="280-nK-qvV" secondAttribute="bottom" constant="16" id="MvT-2S-GFf"/>
                     <constraint firstItem="280-nK-qvV" firstAttribute="leading" secondItem="wRl-ML-hgO" secondAttribute="leading" constant="16" id="ZKL-Bg-025"/>
                     <constraint firstItem="280-nK-qvV" firstAttribute="top" secondItem="wRl-ML-hgO" secondAttribute="top" id="xcI-HS-sah"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="textField" destination="280-nK-qvV" id="IxH-Ph-nYE"/>
             </connections>

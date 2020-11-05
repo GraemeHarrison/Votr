@@ -11,7 +11,7 @@
         <!--Intro View Controller-->
         <scene sceneID="qfX-Gc-S37">
             <objects>
-                <viewController id="TZn-GB-u5d" customClass="IntroViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="TZn-GB-u5d" customClass="IntroViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="th6-ax-Nam">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oYl-Cg-ipV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dIm-pN-uAN" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="dIm-pN-uAN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gaK-Ya-X8k">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

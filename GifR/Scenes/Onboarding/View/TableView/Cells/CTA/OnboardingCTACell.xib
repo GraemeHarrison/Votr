@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-Rh-t7W" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
-                        <rect key="frame" x="16" y="0.0" width="382" height="52"/>
+                        <rect key="frame" x="16" y="16" width="382" height="52"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="52" id="iBT-lo-2Je"/>
                         </constraints>
@@ -27,12 +27,13 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="VXV-Rh-t7W" secondAttribute="bottom" id="Q3g-jZ-90L"/>
+                    <constraint firstAttribute="bottom" secondItem="VXV-Rh-t7W" secondAttribute="bottom" constant="16" id="Q3g-jZ-90L"/>
                     <constraint firstAttribute="trailing" secondItem="VXV-Rh-t7W" secondAttribute="trailing" constant="16" id="ey3-0F-08x"/>
                     <constraint firstItem="VXV-Rh-t7W" firstAttribute="leading" secondItem="fK7-na-76a" secondAttribute="leading" constant="16" id="oui-1A-GlD"/>
-                    <constraint firstItem="VXV-Rh-t7W" firstAttribute="top" secondItem="fK7-na-76a" secondAttribute="top" id="wIy-ja-voX"/>
+                    <constraint firstItem="VXV-Rh-t7W" firstAttribute="top" secondItem="fK7-na-76a" secondAttribute="top" constant="16" id="wIy-ja-voX"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="button" destination="VXV-Rh-t7W" id="K2g-sb-bkN"/>
             </connections>
