@@ -41,6 +41,7 @@ extension SavedGifsAdapter: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: presenter.cellWidth(at: indexPath.item), height: presenter.cellHeight(at: indexPath.item))
+        let length = collectionView.bounds.size.width
+        return CGSize(width: length, height: length)
     }
 }

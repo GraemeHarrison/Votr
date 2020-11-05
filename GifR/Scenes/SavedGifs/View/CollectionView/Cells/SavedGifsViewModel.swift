@@ -9,32 +9,14 @@ import UIKit
 
 enum SavedGifsViewModel {
 
-    case template
+    case gif(url: URL?)
 
     var cellId: String {
 
         switch self {
 
-        case .template:
+        case .gif:
             return SavedGifsCell.reuseId
-        }
-    }
-
-    var height: CGFloat {
-
-        switch self {
-
-        case .template:
-            return 0
-        }
-    }
-
-    var width: CGFloat {
-
-        switch self {
-
-        case .template:
-            return 0
         }
     }
 }

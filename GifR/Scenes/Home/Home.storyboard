@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cH4-rw-JwR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AbS-on-sIu">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -15,21 +15,21 @@
                         <viewControllerLayoutGuide type="bottom" id="prc-Pb-eGC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6qy-z5-2zk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-ed-lDI">
-                                <rect key="frame" x="0.0" y="89" width="375" height="261"/>
+                                <rect key="frame" x="0.0" y="89" width="375" height="217"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63l-wi-2fr">
-                                <rect key="frame" x="172.5" y="393" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="349" width="30" height="30"/>
                                 <state key="normal" title="Like"/>
                                 <connections>
                                     <action selector="likeTapped:" destination="cH4-rw-JwR" eventType="touchUpInside" id="p78-WR-fMK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLG-Cl-YZ7">
-                                <rect key="frame" x="159.5" y="555" width="56" height="30"/>
+                                <rect key="frame" x="159.5" y="511" width="56" height="30"/>
                                 <state key="normal" title="Next Gif"/>
                                 <connections>
                                     <action selector="randomGifTapped:" destination="cH4-rw-JwR" eventType="touchUpInside" id="Gnz-Up-HzO"/>
@@ -49,15 +49,45 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="9F4-11-3cy"/>
                     <connections>
                         <outlet property="imageView" destination="8fK-ed-lDI" id="oh7-Fl-S4X"/>
                         <outlet property="likeButton" destination="63l-wi-2fr" id="JXw-to-pYB"/>
                         <outlet property="randomGifButton" destination="kLG-Cl-YZ7" id="cMg-99-Ygo"/>
+                        <segue destination="l1l-QH-zYh" kind="show" identifier="showSavedGifs" id="Uw2-Th-IEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hq-VK-Slb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575.20000000000005" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="1306" y="-10"/>
+        </scene>
+        <!--SavedGifs-->
+        <scene sceneID="9bF-rY-3sm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SavedGifs" id="l1l-QH-zYh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Sq-B7-x7i"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9i-OO-ZIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="-10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EYU-uL-jiD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AbS-on-sIu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sun-6O-AgY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cH4-rw-JwR" kind="relationship" relationship="rootViewController" id="iNG-OM-djR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8l-TV-Nf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="-10"/>
         </scene>
     </scenes>
 </document>

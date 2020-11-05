@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 
-protocol SavedGifsUseCaseOutput: class {
+protocol SavedGifsUseCaseOutput: PresentAlert {
 
     func presentModelListBegin()
     func presentModelListEnd()
+    func presentGif(url: URL?) 
 }
 
 class SavedGifsPresenter {
@@ -34,12 +35,20 @@ class SavedGifsPresenter {
 
 extension SavedGifsPresenter: SavedGifsUseCaseOutput {
 
+    var vc: (UIViewController & ShowAlert)? {
+        return viewController as? UIViewController & ShowAlert
+    }
+
     func presentModelListBegin() {
         viewModels = []
     }
 
     func presentModelListEnd() {
         viewController?.showModels()
+    }
+
+    func presentGif(url: URL?) {
+        viewModels.append(.gif(url: url))
     }
 }
 

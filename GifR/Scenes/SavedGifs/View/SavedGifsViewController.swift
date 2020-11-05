@@ -9,7 +9,7 @@ import UIKit
 
 @objc protocol SavedGifsViewControllerDelegate {}
 
-protocol SavedGifsPresenterOutput: class {
+protocol SavedGifsPresenterOutput: ShowAlert {
     func showModels()
 }
 
@@ -39,7 +39,12 @@ class SavedGifsViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        configureCollectionView()
         presenter.eventViewReady()
+    }
+
+    private func configureCollectionView() {
+        collectionView.registerCells([SavedGifsCell.self])
     }
 }
 

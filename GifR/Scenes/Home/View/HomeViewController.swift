@@ -37,7 +37,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        configureSavedGifsButton()
         presenter.eventViewReady()
+    }
+
+    private func configureSavedGifsButton() {
+
+        let savedGifsButton = UIBarButtonItem(title: "Saved Gifs", style: .plain, target: self, action: #selector(savedGifsTapped))
+        navigationItem.rightBarButtonItem = savedGifsButton
+    }
+
+    @objc private func savedGifsTapped() {
+        presenter.eventSavedGifsTapped()
     }
     
     @IBAction func likeTapped(_ sender: Any) {
