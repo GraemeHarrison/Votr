@@ -15,11 +15,40 @@ class IntroViewController: UIViewController {
         case showLogin
     }
 
-    @IBOutlet var signUpButton: UIButton!
-    @IBOutlet var loginButton: UIButton!
-
+    @IBOutlet var signUpButton: CTAButton!
+    @IBOutlet var loginButton: CTAButton!
+    @IBOutlet var logoYConstraint: NSLayoutConstraint!
+    @IBOutlet var messageView: UIView!
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
+        signUpButton.style = .red
+        signUpButton.style = .blue
+        messageView.alpha = 0
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+
+        super.viewDidAppear(animated)
+        animateViewsForIntro()
+    }
+
+    private func animateViewsForIntro() {
+
+        let offset: CGFloat = 120
+        logoYConstraint.constant = -UIScreen.main.bounds.height/2 + offset
+
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+
+                self.messageView.alpha = 1
+
+            }, completion: nil)
+        })
     }
 
     @IBAction func signUpTapped(_ sender: Any) {

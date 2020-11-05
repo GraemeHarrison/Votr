@@ -16,41 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready To Gif'r!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-on-JRb">
-                                <rect key="frame" x="135" y="148" width="144" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-pG-LZl">
-                                <rect key="frame" x="180" y="364" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-pG-LZl" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
+                                <rect key="frame" x="24" y="686" width="366" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="4nU-kp-NHL"/>
+                                </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="36c-7e-s2t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-Fj-uQF">
-                                <rect key="frame" x="188" y="526" width="38" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-Fj-uQF" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
+                                <rect key="frame" x="24" y="762" width="366" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="g1t-F2-5cZ"/>
+                                </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="TZn-GB-u5d" eventType="touchUpInside" id="5eW-Gu-Sne"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="Xs2-5m-nf1">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Moe-03-J9D"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2D-1Q-tSG">
+                                <rect key="frame" x="24" y="548" width="366" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Politcal gifs for political goofs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mr-Hu-gtG">
+                                        <rect key="frame" x="0.0" y="48" width="366" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.36220955849999997" blue="0.78177636859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Vot'r" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-on-JRb">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" red="0.72614353899999995" green="0.033713910729999998" blue="0.074948079880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Mr-Hu-gtG" secondAttribute="trailing" id="0Xo-d4-6he"/>
+                                    <constraint firstItem="4Mr-Hu-gtG" firstAttribute="top" secondItem="NGB-on-JRb" secondAttribute="bottom" constant="12" id="5Um-qi-NYC"/>
+                                    <constraint firstAttribute="trailing" secondItem="NGB-on-JRb" secondAttribute="trailing" id="S1S-o2-MiD"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Mr-Hu-gtG" secondAttribute="bottom" id="nEd-45-rrc"/>
+                                    <constraint firstItem="4Mr-Hu-gtG" firstAttribute="leading" secondItem="U2D-1Q-tSG" secondAttribute="leading" id="uPx-Ah-MjR"/>
+                                    <constraint firstItem="NGB-on-JRb" firstAttribute="leading" secondItem="U2D-1Q-tSG" secondAttribute="leading" id="wKM-QN-asr"/>
+                                    <constraint firstItem="NGB-on-JRb" firstAttribute="top" secondItem="U2D-1Q-tSG" secondAttribute="top" id="wOm-qL-fRf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6pL-Wm-nCX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iRC-pG-LZl" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="3yo-Nq-icd"/>
-                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="7N4-HB-RE0"/>
-                            <constraint firstItem="NGB-on-JRb" firstAttribute="top" secondItem="6pL-Wm-nCX" secondAttribute="top" constant="60" id="aBz-b1-h1u"/>
-                            <constraint firstItem="iRC-pG-LZl" firstAttribute="top" secondItem="NGB-on-JRb" secondAttribute="bottom" constant="195" id="cNp-So-H8J"/>
-                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="top" secondItem="iRC-pG-LZl" secondAttribute="bottom" constant="132" id="faW-Vo-diY"/>
-                            <constraint firstItem="NGB-on-JRb" firstAttribute="centerX" secondItem="6pL-Wm-nCX" secondAttribute="centerX" id="zd0-fU-aTo"/>
+                            <constraint firstItem="6pL-Wm-nCX" firstAttribute="bottom" secondItem="E3P-Fj-uQF" secondAttribute="bottom" constant="48" id="8iY-S7-M9f"/>
+                            <constraint firstItem="Xs2-5m-nf1" firstAttribute="width" secondItem="Xs2-5m-nf1" secondAttribute="height" id="A7C-fJ-KYh"/>
+                            <constraint firstItem="U2D-1Q-tSG" firstAttribute="top" secondItem="Xs2-5m-nf1" secondAttribute="bottom" id="EwR-B8-nDf"/>
+                            <constraint firstItem="6pL-Wm-nCX" firstAttribute="trailing" secondItem="E3P-Fj-uQF" secondAttribute="trailing" constant="24" id="HNV-dI-HU5"/>
+                            <constraint firstItem="Xs2-5m-nf1" firstAttribute="centerY" secondItem="th6-ax-Nam" secondAttribute="centerY" id="J6U-U0-V9P"/>
+                            <constraint firstItem="Xs2-5m-nf1" firstAttribute="centerX" secondItem="th6-ax-Nam" secondAttribute="centerX" id="LD9-pf-mc8"/>
+                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="leading" secondItem="6pL-Wm-nCX" secondAttribute="leading" constant="24" id="WMg-Pg-Waq"/>
+                            <constraint firstItem="iRC-pG-LZl" firstAttribute="leading" secondItem="6pL-Wm-nCX" secondAttribute="leading" constant="24" id="ZKU-ll-MJe"/>
+                            <constraint firstItem="6pL-Wm-nCX" firstAttribute="trailing" secondItem="U2D-1Q-tSG" secondAttribute="trailing" constant="24" id="eWI-Ph-oBd"/>
+                            <constraint firstItem="E3P-Fj-uQF" firstAttribute="top" secondItem="iRC-pG-LZl" secondAttribute="bottom" constant="24" id="faW-Vo-diY"/>
+                            <constraint firstItem="6pL-Wm-nCX" firstAttribute="trailing" secondItem="iRC-pG-LZl" secondAttribute="trailing" constant="24" id="tCT-ZU-Sdl"/>
+                            <constraint firstItem="U2D-1Q-tSG" firstAttribute="leading" secondItem="6pL-Wm-nCX" secondAttribute="leading" constant="24" id="x0s-S4-eVy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dyx-sx-6j2"/>
                     <connections>
                         <outlet property="loginButton" destination="E3P-Fj-uQF" id="qGu-s2-kfx"/>
+                        <outlet property="logoYConstraint" destination="J6U-U0-V9P" id="mg1-7M-QWd"/>
+                        <outlet property="messageView" destination="U2D-1Q-tSG" id="D3E-2h-fGk"/>
                         <outlet property="signUpButton" destination="iRC-pG-LZl" id="NCB-Cw-ClS"/>
                     </connections>
                 </viewController>
@@ -78,6 +119,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-1024" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

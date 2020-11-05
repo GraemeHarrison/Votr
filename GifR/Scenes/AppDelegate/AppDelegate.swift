@@ -26,5 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appearance = UINavigationBar.appearance()
         appearance.tintColor = UIColor.blue
         appearance.titleTextAttributes = titleAttributes
+        appearance.shadowImage = UIImage()
+        appearance.setBackgroundImage(UIImage(), for: .default)
+//        appearance.tintColor = UIColor.white
     }
 }
