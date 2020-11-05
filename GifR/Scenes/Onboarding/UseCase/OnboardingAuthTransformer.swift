@@ -19,6 +19,7 @@ class OnboardingAuthTransformer {
 
         self.cache = cache
         self.presenter = presenter
+        presenter?.presentEndEditing() 
 
         var failMessage = ""
 

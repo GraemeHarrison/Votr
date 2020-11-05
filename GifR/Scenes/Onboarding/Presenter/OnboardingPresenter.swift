@@ -16,6 +16,7 @@ protocol OnboardingUseCaseOutput: PresentAlert {
     func presentEmailInput(_ email: String?)
     func presentPasswordInput(_ password: String?)
     func presentCTA(title: String)
+    func presentEndEditing() 
 }
 
 class OnboardingPresenter {
@@ -84,6 +85,10 @@ extension OnboardingPresenter: OnboardingUseCaseOutput {
 
     func presentCTA(title: String) {
         viewModels.append(.cta(title: title))
+    }
+
+    func presentEndEditing() {
+        viewController?.showEndEditing()
     }
 }
 

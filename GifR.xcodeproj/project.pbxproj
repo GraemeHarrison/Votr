@@ -74,6 +74,7 @@
 		2E351168255378C500083B2E /* SavedGifsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E351167255378C500083B2E /* SavedGifsCell.xib */; };
 		2E3511712553816A00083B2E /* UIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511702553816A00083B2E /* UIActivityViewController.swift */; };
 		2E351176255386F900083B2E /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E351175255386F900083B2E /* CustomCollectionViewLayout.swift */; };
+		2E351186255396E900083B2E /* HomeLogoutTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E351185255396E900083B2E /* HomeLogoutTransformer.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -171,6 +172,7 @@
 		2E351167255378C500083B2E /* SavedGifsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedGifsCell.xib; sourceTree = "<group>"; };
 		2E3511702553816A00083B2E /* UIActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewController.swift; sourceTree = "<group>"; };
 		2E351175255386F900083B2E /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		2E351185255396E900083B2E /* HomeLogoutTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogoutTransformer.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				2E350F8C2551058400083B2E /* HomeUseCase.swift */,
 				2E350F8D2551058400083B2E /* HomeBeginTransformer.swift */,
 				2E3510F025524F3D00083B2E /* HomeLikeGifTransformer.swift */,
+				2E351185255396E900083B2E /* HomeLogoutTransformer.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				2E350EBF2550DD8400083B2E /* OnboardingConnector.swift in Sources */,
 				2E35107C2552348400083B2E /* GifResource.swift in Sources */,
 				2E350EC72550DD8400083B2E /* OnboardingBeginTransformer.swift in Sources */,
+				2E351186255396E900083B2E /* HomeLogoutTransformer.swift in Sources */,
 				2E350EC52550DD8400083B2E /* OnboardingViewController.swift in Sources */,
 				2E350F962551058400083B2E /* HomeRouter.swift in Sources */,
 				2E3511452553764900083B2E /* SavedGifsViewController.swift in Sources */,

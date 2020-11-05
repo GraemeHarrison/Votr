@@ -32,4 +32,10 @@ class HomeUseCase {
         let transformer = HomeLikeGifTransformer()
         transformer.transform(cache: cache, presenter: presenter)
     }
+
+    func logoutTapped() {
+
+        let transformer = HomeLogoutTransformer()
+        transformer.transform(presenter: presenter)
+    }
 }

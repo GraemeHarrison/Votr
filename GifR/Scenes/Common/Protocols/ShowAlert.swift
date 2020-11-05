@@ -42,6 +42,13 @@ extension ShowAlert where Self: UIViewController {
         showAlert(title: title?.rawValue, message: message, actions: actions)
     }
 
+    func showYesNoAlert(title: String?, message: String?, yesTitle: String, noTitle: String, completion: ActionBlock) {
+
+        let yes = UIAlertAction(title: yesTitle, style: .default, handler: completion)
+        let no = UIAlertAction(title: noTitle, style: .cancel, handler: completion)
+        showAlert(title: title, message: message, actions: [yes, no])
+    }
+
     func showAlert(title: String?, message: String?, actions: [UIAlertAction]) {
 
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

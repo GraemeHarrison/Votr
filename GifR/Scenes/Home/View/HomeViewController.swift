@@ -37,14 +37,21 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        configureSavedGifsButton()
+        configureNavBar()
         presenter.eventViewReady()
     }
 
-    private func configureSavedGifsButton() {
+    private func configureNavBar() {
+
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+        navigationItem.leftBarButtonItem = logoutButton
 
         let savedGifsButton = UIBarButtonItem(title: "Saved Gifs", style: .plain, target: self, action: #selector(savedGifsTapped))
         navigationItem.rightBarButtonItem = savedGifsButton
+    }
+
+    @objc private func logoutTapped() {
+        presenter.eventLogoutTapped()
     }
 
     @objc private func savedGifsTapped() {

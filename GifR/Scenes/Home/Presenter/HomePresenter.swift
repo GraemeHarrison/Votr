@@ -27,6 +27,10 @@ class HomePresenter {
         useCase.begin()
     }
 
+    func eventLogoutTapped() {
+        useCase.logoutTapped()
+    }
+
     func eventSavedGifsTapped() {
         router.transitionToSavedGifs()
     }

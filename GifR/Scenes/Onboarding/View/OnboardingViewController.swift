@@ -16,7 +16,9 @@ enum OnboardingStartMode {
 protocol OnboardingViewControllerDelegate: class {}
 
 protocol OnboardingPresenterOutput: ShowAlert {
+
     func showModels()
+    func showEndEditing() 
 }
 
 class OnboardingViewController: UIViewController {
@@ -31,6 +33,7 @@ class OnboardingViewController: UIViewController {
     fileprivate var adapter = OnboardingAdapter()
     var presenter: OnboardingPresenter!
     private(set) weak var delegate: OnboardingViewControllerDelegate?
+    fileprivate var keyboardOffset: CGFloat = 0
 
     func setParameters(startMode: OnboardingStartMode, delegate: OnboardingViewControllerDelegate?) {
 
@@ -55,11 +58,21 @@ class OnboardingViewController: UIViewController {
         tableView.registerCells([OnboardingTextFieldCell.self,
                                  OnboardingCTACell.self])
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
 }
 
 extension OnboardingViewController: OnboardingPresenterOutput {
 
     func showModels() {
         tableView.reloadData()
+    }
+
+    func showEndEditing() {
+        view.endEditing(true)
     }
 }
