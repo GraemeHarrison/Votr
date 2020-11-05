@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cH4-rw-JwR">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,19 +9,19 @@
         <!--Saved Gifs View Controller-->
         <scene sceneID="Lae-Oc-rZX">
             <objects>
-                <viewController storyboardIdentifier="SavedGifsViewController" id="cH4-rw-JwR" customClass="SavedGifsViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavedGifsViewController" extendedLayoutIncludesOpaqueBars="YES" id="cH4-rw-JwR" customClass="SavedGifsViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvg-3V-0aT"/>
                         <viewControllerLayoutGuide type="bottom" id="prc-Pb-eGC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6qy-z5-2zk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-Xp-gmU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-Xp-gmU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E14-Xk-XIV">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E14-Xk-XIV">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -32,13 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z3l-Xp-gmU" firstAttribute="top" secondItem="xvg-3V-0aT" secondAttribute="bottom" id="71S-M0-BZI"/>
+                            <constraint firstItem="Z3l-Xp-gmU" firstAttribute="top" secondItem="6qy-z5-2zk" secondAttribute="top" id="71S-M0-BZI"/>
                             <constraint firstAttribute="trailing" secondItem="Z3l-Xp-gmU" secondAttribute="trailing" id="A2q-Nz-ySw"/>
                             <constraint firstItem="Z3l-Xp-gmU" firstAttribute="leading" secondItem="6qy-z5-2zk" secondAttribute="leading" id="ar3-qn-6yV"/>
-                            <constraint firstItem="prc-Pb-eGC" firstAttribute="top" secondItem="Z3l-Xp-gmU" secondAttribute="bottom" id="xLY-UT-u7r"/>
+                            <constraint firstAttribute="bottom" secondItem="Z3l-Xp-gmU" secondAttribute="bottom" id="xLY-UT-u7r"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="collectionView" destination="Z3l-Xp-gmU" id="U1Q-x7-7a3"/>
                     </connections>

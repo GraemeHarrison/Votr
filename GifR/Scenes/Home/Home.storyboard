@@ -9,32 +9,32 @@
         <!--Home View Controller-->
         <scene sceneID="Lae-Oc-rZX">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="cH4-rw-JwR" customClass="HomeViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" extendedLayoutIncludesOpaqueBars="YES" id="cH4-rw-JwR" customClass="HomeViewController" customModule="GifR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvg-3V-0aT"/>
                         <viewControllerLayoutGuide type="bottom" id="prc-Pb-eGC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6qy-z5-2zk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-K1-bFv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAF-8L-geu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H6v-ki-93n">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-ed-lDI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="550"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63l-wi-2fr" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
-                                <rect key="frame" x="44" y="598" width="326" height="52"/>
+                                <rect key="frame" x="44" y="686" width="326" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7Eh-3u-uRc"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLG-Cl-YZ7" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
-                                <rect key="frame" x="44" y="674" width="326" height="52"/>
+                                <rect key="frame" x="44" y="762" width="326" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="aiJ-JC-9Oc"/>
                                 </constraints>
@@ -76,7 +76,6 @@
                             <constraint firstItem="mAF-8L-geu" firstAttribute="trailing" secondItem="rHg-K1-bFv" secondAttribute="trailing" id="yLo-7T-BCr"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="9F4-11-3cy"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="rHg-K1-bFv" id="Kfb-Q6-QyY"/>

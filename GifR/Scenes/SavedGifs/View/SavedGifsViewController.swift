@@ -7,6 +7,23 @@
 
 import UIKit
 
+extension UINavigationBar {
+    func installBlurEffect() {
+        isTranslucent = true
+        setBackgroundImage(UIImage(), for: .default)
+        let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+        var blurFrame = bounds
+        blurFrame.size.height += statusBarHeight
+        blurFrame.origin.y -= statusBarHeight
+        let blurView  = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blurView.isUserInteractionEnabled = false
+        blurView.frame = blurFrame
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(blurView)
+        blurView.layer.zPosition = -1
+    }
+}
+
 @objc protocol SavedGifsViewControllerDelegate {}
 
 protocol SavedGifsPresenterOutput: ShowAlert {
@@ -40,6 +57,7 @@ class SavedGifsViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+//        navigationController?.navigationBar.installBlurEffect()
         configureCollectionView()
         presenter.eventViewReady()
     }

@@ -14,7 +14,7 @@ protocol CustomCollectionViewLayoutDelegate: class {
 class CustomCollectionViewLayout: UICollectionViewLayout {
 
     fileprivate var numberOfColumns = 2
-    fileprivate var cellPadding: CGFloat = 6
+    fileprivate var cellPadding: CGFloat = 2
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
     fileprivate var contentHeight: CGFloat = 0
     weak var delegate: CustomCollectionViewLayoutDelegate?
