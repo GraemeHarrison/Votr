@@ -75,6 +75,9 @@
 		2E3511712553816A00083B2E /* UIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511702553816A00083B2E /* UIActivityViewController.swift */; };
 		2E351176255386F900083B2E /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E351175255386F900083B2E /* CustomCollectionViewLayout.swift */; };
 		2E351186255396E900083B2E /* HomeLogoutTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E351185255396E900083B2E /* HomeLogoutTransformer.swift */; };
+		2E35118C25539ACB00083B2E /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35118B25539ACB00083B2E /* CTAButton.swift */; };
+		2E35119425539B6E00083B2E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35119325539B6E00083B2E /* Fonts.swift */; };
+		2E35119F25539C3D00083B2E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35119E25539C3D00083B2E /* UIView.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -173,6 +176,9 @@
 		2E3511702553816A00083B2E /* UIActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewController.swift; sourceTree = "<group>"; };
 		2E351175255386F900083B2E /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		2E351185255396E900083B2E /* HomeLogoutTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogoutTransformer.swift; sourceTree = "<group>"; };
+		2E35118B25539ACB00083B2E /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		2E35119325539B6E00083B2E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2E35119E25539C3D00083B2E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -398,6 +404,8 @@
 		2E350ED22550DDEE00083B2E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E35119325539B6E00083B2E /* Fonts.swift */,
+				2E35118A25539AC200083B2E /* Views */,
 				2E350FA2255107CC00083B2E /* Protocols */,
 				2E350ED32550DDF900083B2E /* Extensions */,
 			);
@@ -411,6 +419,7 @@
 				2E350F792551038100083B2E /* String.swift */,
 				2E35111B2552687C00083B2E /* NSError.swift */,
 				2E3511702553816A00083B2E /* UIActivityViewController.swift */,
+				2E35119E25539C3D00083B2E /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -660,6 +669,14 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
+		2E35118A25539AC200083B2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E35118B25539ACB00083B2E /* CTAButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -907,6 +924,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E35119425539B6E00083B2E /* Fonts.swift in Sources */,
 				2E350F902551058400083B2E /* HomePresenter.swift in Sources */,
 				2E35103D2551185200083B2E /* APIRouter.swift in Sources */,
 				2E35105025511A7900083B2E /* APIClient.swift in Sources */,
@@ -919,6 +937,7 @@
 				2E350F7A2551038100083B2E /* String.swift in Sources */,
 				2E350EC62550DD8400083B2E /* OnboardingUseCase.swift in Sources */,
 				2E35113E2553764900083B2E /* SavedGifsPresenter.swift in Sources */,
+				2E35119F25539C3D00083B2E /* UIView.swift in Sources */,
 				2E35113F2553764900083B2E /* SavedGifsConnector.swift in Sources */,
 				2E350F412550F36200083B2E /* OnboardingAuthTransformer.swift in Sources */,
 				2E350F942551058400083B2E /* HomeUseCase.swift in Sources */,
@@ -952,6 +971,7 @@
 				2E3510C6255247C700083B2E /* AuthService.swift in Sources */,
 				2E350EC82550DD8400083B2E /* OnboardingRouter.swift in Sources */,
 				2E3510E32552490000083B2E /* GifService.swift in Sources */,
+				2E35118C25539ACB00083B2E /* CTAButton.swift in Sources */,
 				2E3511432553764900083B2E /* SavedGifsAdapter.swift in Sources */,
 				2E350F202550F10500083B2E /* OnboardingCTACell.swift in Sources */,
 				2E3511442553764900083B2E /* SavedGifsCellConfigurator.swift in Sources */,

@@ -17,9 +17,10 @@ protocol HomePresenterOutput: ShowAlert {
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var likeButton: UIButton!
-    @IBOutlet var randomGifButton: UIButton!
+    @IBOutlet var likeButton: CTAButton!
+    @IBOutlet var randomGifButton: CTAButton!
 
     var presenter: HomePresenter!
     private(set) var delegate: HomeViewControllerDelegate?
@@ -37,6 +38,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        likeButton.style = .red
+        randomGifButton.style = .blue
         configureNavBar()
         presenter.eventViewReady()
     }
@@ -70,6 +73,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomePresenterOutput {
 
     func showGif(url: URL?) {
+
+        backgroundImageView.sd_setImage(with: url) { (image, error, _, _) in
+        }
 
         imageView.sd_setImage(with: url) { (image, error, _, _) in
         }

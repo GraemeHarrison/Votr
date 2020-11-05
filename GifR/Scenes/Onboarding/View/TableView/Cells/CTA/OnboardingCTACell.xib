@@ -11,12 +11,15 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OnboardingCTACell" rowHeight="76" id="nUA-LY-hTK" customClass="OnboardingCTACell" customModule="GifR" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nUA-LY-hTK" id="fK7-na-76a">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nUA-LY-hTK" id="fK7-na-76a">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-Rh-t7W">
-                        <rect key="frame" x="16" y="0.0" width="382" height="76"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-Rh-t7W" customClass="CTAButton" customModule="GifR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="382" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="iBT-lo-2Je"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
                         <connections>
                             <action selector="buttonTapped:" destination="nUA-LY-hTK" eventType="touchUpInside" id="0ax-f6-zqb"/>

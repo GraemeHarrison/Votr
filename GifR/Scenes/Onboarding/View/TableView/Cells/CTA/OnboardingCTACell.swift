@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingCTACell: UITableViewCell, OnboardingCellProtocol {
 
-    @IBOutlet var button: UIButton!
+    @IBOutlet var button: CTAButton!
 
     fileprivate weak var presenter: OnboardingPresenter!
     fileprivate weak var tableView: UITableView!
@@ -23,6 +23,8 @@ class OnboardingCTACell: UITableViewCell, OnboardingCellProtocol {
         self.presenter = presenter
         self.tableView = tableView
         self.indexPath = indexPath
+
+        button.style = .blue
         return self
     }
     

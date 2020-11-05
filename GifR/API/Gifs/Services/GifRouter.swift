@@ -39,6 +39,7 @@ enum GifRouter: APIRouter {
         case .fetchRandomGif:
             return [
                 "api_key": Bundle.main.infoDictionary!["GIPHY_API_KEY"] as! String,
+                "tag": "election"
             ]
         }
     }
