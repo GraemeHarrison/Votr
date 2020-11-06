@@ -9,7 +9,7 @@ import UIKit
 
 enum SavedGifsViewModel {
 
-    case gif(url: URL?, width: CGFloat?, height: CGFloat?)
+    case gif(originalUrl: URL?, downsampledUrl: URL?, width: CGFloat?, height: CGFloat?)
 
     var cellId: String {
 

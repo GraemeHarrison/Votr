@@ -17,7 +17,6 @@ class HomeBeginTransformer {
 
             case .success(let gif):
 
-                print("***** Success fetching gif with url: \(String(describing: gif?.imageOriginalUrl?.absoluteString))")
                 cache.currentGif = gif
                 presenter?.presentGif(url: gif?.imageOriginalUrl)
 

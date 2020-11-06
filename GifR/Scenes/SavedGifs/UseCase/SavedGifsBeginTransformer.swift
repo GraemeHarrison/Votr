@@ -18,7 +18,9 @@ class SavedGifsBeginTransformer {
             case .success(let gifs):
 
                 presenter?.presentModelListBegin()
-                gifs.reversed().forEach { presenter?.presentGif(url: $0.fixedWidthSmallUrl, width: $0.imageWidth, height: $0.imageHeight) }
+                gifs.reversed().forEach {
+                    presenter?.presentGif(originalUrl: $0.imageOriginalUrl, downsampledUrl: $0.fixedWidthDownsampledUrl, width: $0.imageWidth, height: $0.imageHeight)
+                }
                 presenter?.presentModelListEnd()
 
             case .failure(let error):

@@ -79,10 +79,8 @@ extension HomeViewController: HomePresenterOutput {
 
         likeButton.isEnabled = true
 
-        backgroundImageView.sd_setImage(with: url) { (image, error, _, _) in
-        }
-
         imageView.sd_setImage(with: url) { (image, error, _, _) in
+            self.backgroundImageView.image = image
         }
     }
 }

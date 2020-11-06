@@ -44,7 +44,7 @@ extension SavedGifsAdapter: CustomCollectionViewLayoutDelegate {
 
     func collectionView(_ collectionView: UICollectionView, heightForGifAtIndexPath indexPath: IndexPath) -> CGFloat {
 
-        guard case .gif(_, let width, let height) = presenter.viewModel(at: indexPath.item),
+        guard case .gif(_, _, let width, let height) = presenter.viewModel(at: indexPath.item),
               let h = height,
               let w = width else {
             return 50

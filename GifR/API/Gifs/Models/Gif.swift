@@ -11,6 +11,8 @@ class Gif {
 
     enum Key: String {
         case uid
+        case fixedWidthSmallUrl
+        case fixedWidthDownsampledUrl
         case imageOriginalUrl
         case imageWidth
         case imageHeight
@@ -48,16 +50,15 @@ class Gif {
         }
     }
 
-//    init(uid: String, url: String) {
-//
-//        self.uid = uid
-//
-//        if let url = URL(string: url) {
-//            imageOriginalUrl = url
-//        }
-//    }
-
     init(dictionary: [AnyHashable: Any]) {
+
+        if let value = dictionary[Key.fixedWidthSmallUrl.rawValue] as? String, let url = URL(string: value) {
+            fixedWidthSmallUrl = url
+        }
+
+        if let value = dictionary[Key.fixedWidthDownsampledUrl.rawValue] as? String, let url = URL(string: value) {
+            fixedWidthDownsampledUrl = url
+        }
 
         if let value = dictionary[Key.imageOriginalUrl.rawValue] as? String, let url = URL(string: value) {
             imageOriginalUrl = url
@@ -78,6 +79,8 @@ extension Gif {
     func toDictionary() -> [AnyHashable: Any] {
 
         return fields(attributes: [
+            .fixedWidthSmallUrl: fixedWidthSmallUrl!.absoluteString,
+            .fixedWidthDownsampledUrl: fixedWidthDownsampledUrl!.absoluteString,
             .imageOriginalUrl: imageOriginalUrl!.absoluteString,
             .imageWidth: Double(imageWidth!),
             .imageHeight: Double(imageHeight!),
