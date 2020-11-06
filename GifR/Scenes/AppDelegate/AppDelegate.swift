@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureGlobalNavBar() {
 
-        UIApplication.shared.statusBarStyle = .lightContent
-
         let titleAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.voteRed, .font: UIFont.bold]
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = titleAttributes

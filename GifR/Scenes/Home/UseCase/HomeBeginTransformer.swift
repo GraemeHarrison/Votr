@@ -11,6 +11,9 @@ class HomeBeginTransformer {
 
     func transform(cache: HomeUseCase.Cache, presenter: HomeUseCaseOutput?) {
 
+        let user = AuthService.shared.currentUser!
+        presenter?.presentHeader(username: user.username)
+
         GifClient.fetchRandomGif { (result) in
 
             switch result {

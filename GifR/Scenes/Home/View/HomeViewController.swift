@@ -11,11 +11,14 @@ import SDWebImage
 protocol HomeViewControllerDelegate: class {}
 
 protocol HomePresenterOutput: ShowAlert {
-    func showGif(url: URL?) 
+
+    func showGif(url: URL?)
+    func showHeader(text: String)
 }
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet var headerLabel: UILabel!
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var likeButton: CTAButton!
@@ -74,6 +77,10 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomePresenterOutput {
+
+    func showHeader(text: String) {
+        headerLabel.text = text
+    }
 
     func showGif(url: URL?) {
 

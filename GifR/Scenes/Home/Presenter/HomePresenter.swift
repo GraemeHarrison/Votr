@@ -8,7 +8,9 @@
 import UIKit
 
 protocol HomeUseCaseOutput: PresentAlert {
-    func presentGif(url: URL?) 
+
+    func presentGif(url: URL?)
+    func presentHeader(username: String)
 }
 
 class HomePresenter {
@@ -52,6 +54,10 @@ extension HomePresenter: HomeUseCaseOutput {
 
     func presentGif(url: URL?) {
         viewController?.showGif(url: url)
+    }
+
+    func presentHeader(username: String) {
+        viewController?.showHeader(text: "Welcome \(username.capitalized)!")
     }
 }
 
