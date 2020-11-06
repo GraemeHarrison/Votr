@@ -50,7 +50,6 @@
 		2E3510422551190700083B2E /* GifRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510412551190700083B2E /* GifRouter.swift */; };
 		2E35105025511A7900083B2E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35104F25511A7900083B2E /* APIClient.swift */; };
 		2E35105925511BB000083B2E /* GifClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35105825511BB000083B2E /* GifClient.swift */; };
-		2E3510642552201900083B2E /* get_gif.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3510632552201900083B2E /* get_gif.json */; };
 		2E35107C2552348400083B2E /* GifResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35107B2552348400083B2E /* GifResource.swift */; };
 		2E3510842552354000083B2E /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510832552354000083B2E /* Gif.swift */; };
 		2E3510892552361500083B2E /* APIDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510882552361500083B2E /* APIDeserializer.swift */; };
@@ -80,6 +79,14 @@
 		2E35119F25539C3D00083B2E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35119E25539C3D00083B2E /* UIView.swift */; };
 		2E3511A72553B09300083B2E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3511A62553B09300083B2E /* CustomTextField.swift */; };
 		2EF1E25C2554C32F0065E4D4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1E25B2554C32F0065E4D4 /* Colors.swift */; };
+		2EF1E26D2554C8630065E4D4 /* get_gif.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3510632552201900083B2E /* get_gif.json */; };
+		2EF1E2752554C8810065E4D4 /* GifResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1E2742554C8810065E4D4 /* GifResourceTests.swift */; };
+		2EF1E27C2554C8D90065E4D4 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510832552354000083B2E /* Gif.swift */; };
+		2EF1E2802554C8DC0065E4D4 /* GifResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35107B2552348400083B2E /* GifResource.swift */; };
+		2EF1E28C2554C9250065E4D4 /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1E2842554C9220065E4D4 /* JSONFileReader.swift */; };
+		2EF1E2902554C9410065E4D4 /* GifDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35108D255236E300083B2E /* GifDeserializer.swift */; };
+		2EF1E2AC2554CA090065E4D4 /* APIDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510882552361500083B2E /* APIDeserializer.swift */; };
+		2EF1E2BE2554CC970065E4D4 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1E2B92554CC8B0065E4D4 /* XCTestCase+Extension.swift */; };
 		95F8CFF4F125249842E5B50B /* Pods_GifRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */; };
 		AC06157646A04D08401B512A /* Pods_GifR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CFB58F073028AD6D9217F /* Pods_GifR.framework */; };
 		E1640DFE6AF1E79B0D866527 /* Pods_GifR_GifRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */; };
@@ -183,6 +190,9 @@
 		2E35119E25539C3D00083B2E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		2E3511A62553B09300083B2E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2EF1E25B2554C32F0065E4D4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2EF1E2742554C8810065E4D4 /* GifResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifResourceTests.swift; sourceTree = "<group>"; };
+		2EF1E2842554C9220065E4D4 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
+		2EF1E2B92554CC8B0065E4D4 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		5AF00DBD3117FF46A920AA9C /* Pods_GifRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6F2598A0898F684ECA3A06 /* Pods_GifR_GifRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifR_GifRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC379480793231BE48265 /* Pods-GifR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifR.release.xcconfig"; path = "Target Support Files/Pods-GifR/Pods-GifR.release.xcconfig"; sourceTree = "<group>"; };
@@ -462,6 +472,7 @@
 				2E35105525511B5800083B2E /* Firebase */,
 				2E35105625511B5F00083B2E /* Users */,
 				2E35105725511B9700083B2E /* Gifs */,
+				2EF1E2B82554CC7B0065E4D4 /* Tests */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -573,7 +584,7 @@
 			children = (
 				2E3510832552354000083B2E /* Gif.swift */,
 				2E35107B2552348400083B2E /* GifResource.swift */,
-				2E3510632552201900083B2E /* get_gif.json */,
+				2EF1E26C2554C8590065E4D4 /* Tests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -689,6 +700,24 @@
 				2EF1E25B2554C32F0065E4D4 /* Colors.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		2EF1E26C2554C8590065E4D4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2EF1E2742554C8810065E4D4 /* GifResourceTests.swift */,
+				2E3510632552201900083B2E /* get_gif.json */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2EF1E2B82554CC7B0065E4D4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2EF1E2842554C9220065E4D4 /* JSONFileReader.swift */,
+				2EF1E2B92554CC8B0065E4D4 /* XCTestCase+Extension.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -807,7 +836,6 @@
 				2E350EBD2550DD8400083B2E /* Onboarding.storyboard in Resources */,
 				2E351168255378C500083B2E /* SavedGifsCell.xib in Resources */,
 				2E350F052550E4F100083B2E /* OnboardingTextFieldCell.xib in Resources */,
-				2E3510642552201900083B2E /* get_gif.json in Resources */,
 				2E35113D2553764900083B2E /* SavedGifs.storyboard in Resources */,
 				2E350EE62550DFAE00083B2E /* Intro.storyboard in Resources */,
 				2E350F912551058400083B2E /* Home.storyboard in Resources */,
@@ -818,6 +846,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF1E26D2554C8630065E4D4 /* get_gif.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,7 +1033,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF1E28C2554C9250065E4D4 /* JSONFileReader.swift in Sources */,
+				2EF1E2752554C8810065E4D4 /* GifResourceTests.swift in Sources */,
+				2EF1E2AC2554CA090065E4D4 /* APIDeserializer.swift in Sources */,
 				2E350E0F2550CBE000083B2E /* GifRTests.swift in Sources */,
+				2EF1E2BE2554CC970065E4D4 /* XCTestCase+Extension.swift in Sources */,
+				2EF1E2902554C9410065E4D4 /* GifDeserializer.swift in Sources */,
+				2EF1E2802554C8DC0065E4D4 /* GifResource.swift in Sources */,
+				2EF1E27C2554C8D90065E4D4 /* Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
