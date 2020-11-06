@@ -17,6 +17,8 @@ class Gif {
     }
 
     var uid: String?
+    var fixedWidthSmallUrl: URL?
+    var fixedWidthDownsampledUrl: URL?
     var imageOriginalUrl: URL?
     var imageWidth: CGFloat?
     var imageHeight: CGFloat?
@@ -24,6 +26,14 @@ class Gif {
     init(resource: GifResource) {
         
         let attributes = resource.data
+
+        if let urlString = attributes.fixedWidthSmallUrl, let url = URL(string: urlString) {
+            fixedWidthSmallUrl = url
+        }
+
+        if let urlString = attributes.fixedWidthDownsampledUrl, let url = URL(string: urlString) {
+            fixedWidthDownsampledUrl = url
+        }
 
         if let urlString = attributes.imageOriginalUrl, let url = URL(string: urlString) {
             imageOriginalUrl = url

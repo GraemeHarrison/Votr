@@ -30,6 +30,13 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
         imageView.sd_setImage(with: url)
         return self
     }
+
+    override func prepareForReuse() {
+
+        super.prepareForReuse()
+        imageView.sd_cancelCurrentImageLoad()
+        imageView.image = nil
+    }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         presenter?.eventShareGifTapped(url: gifUrl!)

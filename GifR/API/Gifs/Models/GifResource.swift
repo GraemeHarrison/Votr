@@ -10,7 +10,9 @@ import Foundation
 struct GifResource: Decodable {
 
     struct Attributes: Decodable {
-        
+
+        let fixedWidthSmallUrl: String?
+        let fixedWidthDownsampledUrl: String?
         let imageOriginalUrl: String?
         let imageWidth: String?
         let imageHeight: String?

@@ -25,7 +25,15 @@ class GifResourceTests: XCTestCase {
         gif = deserializer.process()!
     }
 
-    func testThatGifUrlIsDeserialized() {
+    func testThatFixedWidthSmallUrlIsDeserialized() {
+        XCTAssertEqual(gif.fixedWidthSmallUrl?.absoluteString, attributes["fixed_width_small_url"].stringValue)
+    }
+
+    func testThatFixedWidthDownsampledUrlIsDeserialized() {
+        XCTAssertEqual(gif.fixedWidthDownsampledUrl?.absoluteString, attributes["fixed_width_downsampled_url"].stringValue)
+    }
+
+    func testThatImageOriginalUrlIsDeserialized() {
         XCTAssertEqual(gif.imageOriginalUrl?.absoluteString, attributes["image_original_url"].stringValue)
     }
 
