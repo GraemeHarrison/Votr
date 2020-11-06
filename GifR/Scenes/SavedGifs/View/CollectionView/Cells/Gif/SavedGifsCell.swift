@@ -27,9 +27,7 @@ class SavedGifsCell: UICollectionViewCell, SavedGifsCellProtocol {
         self.indexPath = indexPath
         self.gifUrl = url
         shareButton.isEnabled = url != nil
-        imageView.sd_setImage(with: url) { (image, error, _, _) in
-            
-        }
+        imageView.sd_setImage(with: url)
         return self
     }
     

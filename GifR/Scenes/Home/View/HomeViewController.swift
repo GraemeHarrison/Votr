@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         title = "Vot'r"
         likeButton.style = .red
         randomGifButton.style = .blue
+        likeButton.isEnabled = false
         configureNavBar()
         presenter.eventViewReady()
     }
