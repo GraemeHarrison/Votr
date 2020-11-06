@@ -10,8 +10,11 @@ import FirebaseDatabase
 
 class GifService: FirebaseService {
 
-    private let user = AuthService.shared.currentUser!
     static let shared = GifService()
+
+    private var user: User {
+        return AuthService.shared.currentUser!
+    }
 
     typealias GifsResult = (Result<[Gif], Error>) -> Void
 
