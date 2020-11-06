@@ -12,6 +12,7 @@ target 'GifR' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SDWebImage'
+  pod 'NVActivityIndicatorView'
 
   target 'GifRTests' do
     inherit! :search_paths
