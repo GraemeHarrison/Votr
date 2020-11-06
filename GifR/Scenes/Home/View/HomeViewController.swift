@@ -62,6 +62,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func likeTapped(_ sender: Any) {
+
+        likeButton.isEnabled = false
         presenter.eventLikeTapped()
     }
 
@@ -73,6 +75,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomePresenterOutput {
 
     func showGif(url: URL?) {
+
+        likeButton.isEnabled = true
 
         backgroundImageView.sd_setImage(with: url) { (image, error, _, _) in
         }
